@@ -1,0 +1,166 @@
+example complete [[4, 5], [6, 3]] 165.508 ms
+scalar-0-0 complete [[0]] 0 ms
+scalar-0-1 complete [[0]] 0 ms
+scalar-0-2 complete [[0]] 0 ms
+scalar-0-3 complete [[0]] 0 ms
+scalar-0-4 complete [[0]] 0 ms
+scalar-0-5 complete [[0]] 0 ms
+scalar-0-6 complete [[0]] 0 ms
+scalar-0-7 complete [[0]] 0 ms
+scalar-0-8 complete [[0]] 0 ms
+scalar-0-9 complete [[0]] 0 ms
+scalar-1-0 complete [[0]] 2.487 ms
+scalar-1-1 complete [[1]] 2.857 ms
+scalar-1-2 complete [[2]] 3.024 ms
+scalar-1-3 complete [[3]] 2.813 ms
+scalar-1-4 complete [[4]] 2.953 ms
+scalar-1-5 complete [[5]] 3.011 ms
+scalar-1-6 complete [[6]] 2.996 ms
+scalar-1-7 complete [[7]] 2.934 ms
+scalar-1-8 complete [[8]] 2.946 ms
+scalar-1-9 complete [[9]] 2.983 ms
+scalar-2-0 complete [[0]] 5.171 ms
+scalar-2-1 complete [[2]] 5.624 ms
+scalar-2-2 complete [[4]] 7.651 ms
+scalar-2-3 complete [[6]] 5.732 ms
+scalar-2-4 complete [[8]] 5.758 ms
+scalar-2-5 complete [[10]] 6.002 ms
+scalar-2-6 complete [[12]] 5.721 ms
+scalar-2-7 complete [[14]] 6.049 ms
+scalar-2-8 complete [[16]] 6.689 ms
+scalar-2-9 complete [[18]] 5.764 ms
+scalar-3-0 complete [[0]] 8.017 ms
+scalar-3-1 complete [[3]] 9.096 ms
+scalar-3-2 complete [[6]] 9.343 ms
+scalar-3-3 complete [[9]] 8.652 ms
+scalar-3-4 complete [[12]] 9.194 ms
+scalar-3-5 complete [[15]] 10.39 ms
+scalar-3-6 complete [[18]] 9.525 ms
+scalar-3-7 complete [[21]] 11.673 ms
+scalar-3-8 complete [[24]] 10.192 ms
+scalar-3-9 complete [[27]] 8.665 ms
+scalar-4-0 complete [[0]] 18.661 ms
+scalar-4-1 complete [[4]] 12.617 ms
+scalar-4-2 complete [[8]] 12.334 ms
+scalar-4-3 complete [[12]] 11.505 ms
+scalar-4-4 complete [[16]] 12.443 ms
+scalar-4-5 complete [[20]] 12.162 ms
+scalar-4-6 complete [[24]] 12.158 ms
+scalar-4-7 complete [[28]] 11.63 ms
+scalar-4-8 complete [[32]] 11.585 ms
+scalar-4-9 complete [[36]] 13.402 ms
+scalar-5-0 complete [[0]] 14.408 ms
+scalar-5-1 complete [[5]] 16.338 ms
+scalar-5-2 complete [[10]] 15.402 ms
+scalar-5-3 complete [[15]] 16.061 ms
+scalar-5-4 complete [[20]] 15.079 ms
+scalar-5-5 complete [[25]] 15.397 ms
+scalar-5-6 complete [[30]] 15.332 ms
+scalar-5-7 complete [[35]] 17.529 ms
+scalar-5-8 complete [[40]] 15.663 ms
+scalar-5-9 complete [[45]] 15.479 ms
+scalar-6-0 complete [[0]] 16.18 ms
+scalar-6-1 complete [[6]] 17.841 ms
+scalar-6-2 complete [[12]] 20.108 ms
+scalar-6-3 complete [[18]] 21.054 ms
+scalar-6-4 complete [[24]] 21.834 ms
+scalar-6-5 complete [[30]] 19.03 ms
+scalar-6-6 complete [[36]] 18.006 ms
+scalar-6-7 complete [[42]] 17.758 ms
+scalar-6-8 complete [[48]] 17.339 ms
+scalar-6-9 complete [[54]] 17.506 ms
+scalar-7-0 complete [[0]] 18.384 ms
+scalar-7-1 complete [[7]] 20.912 ms
+scalar-7-2 complete [[14]] 21.823 ms
+scalar-7-3 complete [[21]] 21.43 ms
+scalar-7-4 complete [[28]] 21.176 ms
+scalar-7-5 complete [[35]] 19.95 ms
+scalar-7-6 complete [[42]] 22.581 ms
+scalar-7-7 complete [[49]] 20.082 ms
+scalar-7-8 complete [[56]] 20.028 ms
+scalar-7-9 complete [[63]] 21.954 ms
+scalar-8-0 complete [[0]] 21.531 ms
+scalar-8-1 complete [[8]] 23.47 ms
+scalar-8-2 complete [[16]] 26.369 ms
+scalar-8-3 complete [[24]] 24.02 ms
+scalar-8-4 complete [[32]] 23.064 ms
+scalar-8-5 complete [[40]] 24.916 ms
+scalar-8-6 complete [[48]] 22.787 ms
+scalar-8-7 complete [[56]] 25.215 ms
+scalar-8-8 complete [[64]] 22.685 ms
+scalar-8-9 complete [[72]] 23.66 ms
+scalar-9-0 complete [[0]] 23.735 ms
+scalar-9-1 complete [[9]] 27.568 ms
+scalar-9-2 complete [[18]] 28.682 ms
+scalar-9-3 complete [[27]] 25.977 ms
+scalar-9-4 complete [[36]] 26.978 ms
+scalar-9-5 complete [[45]] 26.82 ms
+scalar-9-6 complete [[54]] 27.325 ms
+scalar-9-7 complete [[63]] 26.746 ms
+scalar-9-8 complete [[72]] 26.481 ms
+scalar-9-9 complete [[81]] 26.811 ms
+maximum-baseline-v1 complete [[162, 162], [162, 162]] 977.051 ms
+identity-baseline-v1 complete [[9, 8], [7, 6]] 798.084 ms
+zeros-baseline-v1 complete [[0, 0], [0, 0]] 0 ms
+random-baseline-v1-0 complete [[6]] 5.537 ms
+random-baseline-v1-1 complete [[64, 8]] 88.824 ms
+random-baseline-v1-2 complete [[50]] 55.65 ms
+random-baseline-v1-3 complete [[10, 12], [11, 32]] 540.853 ms
+random-baseline-v1-4 complete [[5]] 25.533 ms
+random-baseline-v1-5 complete [[48]] 50.1 ms
+random-baseline-v1-6 complete [[18, 9]] 35.547 ms
+random-baseline-v1-7 complete [[4, 16], [0, 0]] 40.117 ms
+random-baseline-v1-8 complete [[77]] 37.232 ms
+random-baseline-v1-9 complete [[0, 0]] 0 ms
+random-baseline-v1-10 complete [[57]] 37.556 ms
+random-baseline-v1-11 complete [[103, 14], [66, 9]] 630.263 ms
+random-baseline-v1-12 complete [[40, 45]] 91.292 ms
+random-baseline-v1-13 complete [[22, 20], [36, 20]] 450.981 ms
+random-baseline-v1-14 complete [[20], [10]] 25.378 ms
+random-baseline-v1-15 complete [[24], [69]] 67.122 ms
+maximum-sparse-v1.1 complete [[162, 162], [162, 162]] 957.538 ms
+identity-sparse-v1.1 complete [[9, 8], [7, 6]] 400.668 ms
+zeros-sparse-v1.1 complete [[0, 0], [0, 0]] 0 ms
+random-sparse-v1.1-0 complete [[6]] 5.978 ms
+random-sparse-v1.1-1 complete [[64, 8]] 95.676 ms
+random-sparse-v1.1-2 complete [[50]] 57.823 ms
+random-sparse-v1.1-3 complete [[10, 12], [11, 32]] 472.491 ms
+random-sparse-v1.1-4 complete [[5]] 4.704 ms
+random-sparse-v1.1-5 complete [[48]] 53.614 ms
+random-sparse-v1.1-6 complete [[18, 9]] 34.839 ms
+random-sparse-v1.1-7 complete [[4, 16], [0, 0]] 41.674 ms
+random-sparse-v1.1-8 complete [[77]] 39.364 ms
+random-sparse-v1.1-9 complete [[0, 0]] 0 ms
+random-sparse-v1.1-10 complete [[57]] 40.435 ms
+random-sparse-v1.1-11 complete [[103, 14], [66, 9]] 674.584 ms
+random-sparse-v1.1-12 complete [[40, 45]] 97.393 ms
+random-sparse-v1.1-13 complete [[22, 20], [36, 20]] 361.275 ms
+random-sparse-v1.1-14 complete [[20], [10]] 29.009 ms
+random-sparse-v1.1-15 complete [[24], [69]] 71.503 ms
+maximum-transpose-v1.2 complete [[162, 162], [162, 162]] 1035.821 ms
+identity-transpose-v1.2 complete [[9, 8], [7, 6]] 60.493 ms
+zeros-transpose-v1.2 complete [[0, 0], [0, 0]] 0 ms
+random-transpose-v1.2-0 complete [[6]] 6.443 ms
+random-transpose-v1.2-1 complete [[64, 8]] 45.69 ms
+random-transpose-v1.2-2 complete [[50]] 30.161 ms
+random-transpose-v1.2-3 complete [[10, 12], [11, 32]] 180.833 ms
+random-transpose-v1.2-4 complete [[5]] 5.777 ms
+random-transpose-v1.2-5 complete [[48]] 39.538 ms
+random-transpose-v1.2-6 complete [[18, 9]] 38.551 ms
+random-transpose-v1.2-7 complete [[4, 16], [0, 0]] 41.465 ms
+random-transpose-v1.2-8 complete [[77]] 61.712 ms
+random-transpose-v1.2-9 complete [[0, 0]] 0 ms
+random-transpose-v1.2-10 complete [[57]] 48.031 ms
+random-transpose-v1.2-11 complete [[103, 14], [66, 9]] 539.542 ms
+random-transpose-v1.2-12 complete [[40, 45]] 105.238 ms
+random-transpose-v1.2-13 complete [[22, 20], [36, 20]] 378.28 ms
+random-transpose-v1.2-14 complete [[20], [10]] 33.026 ms
+random-transpose-v1.2-15 complete [[24], [69]] 81.738 ms
+controls complete [[4, 5], [6, 3]] 168.904 ms
+speed-0 complete [[6]] 6.327 ms
+speed-1 complete [[6]] 6.222 ms
+speed-2 complete [[6]] 5.87 ms
+fault-no-rescue failed [[0, 0], [0, 0]] 0 ms
+fault-empty-deck failed [[0, 0], [0, 0]] 0 ms
+fault-no-range failed [[0, 0], [0, 0]] 0 ms
+PASS 165

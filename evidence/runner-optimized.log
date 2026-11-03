@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "edition": "optimized",
+  "algorithm": "transpose-v1.2",
+  "C": [
+    [
+      9,
+      8
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "activeCardUses": 4,
+  "rescues": 4,
+  "fangzhu": 4,
+  "engineMs": 56.5007,
+  "error": null
+}
+C:\Users\rana608\Music\����ɱGEMM\evidence\optimized\20261103-154618-663968.json

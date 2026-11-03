@@ -1,0 +1,15 @@
+baseline zero complete [[0, 0], [0, 0]]
+baseline one complete [[1]]
+baseline scalar-9 complete [[81]]
+baseline scalar-10 complete [[100]]
+baseline example complete [[4, 5], [6, 3]]
+baseline all-9 complete [[162, 162], [162, 162]]
+baseline all-100 complete [[20000, 20000], [20000, 20000]]
+baseline rectangle complete [[112], [135]]
+baseline zero-right complete [[0, 0], [0, 0]]
+baseline controls complete [[4, 5], [6, 3]]
+baseline no-rescue failed [[0, 0], [0, 0]]
+baseline empty-deck failed [[0, 0], [0, 0]]
+baseline no-range failed [[0, 0], [0, 0]]
+PASS 13
+PASS 21 (including exact state/action replay)

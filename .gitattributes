@@ -1,0 +1,2 @@
+# Preserve project scripts and evidence bytes; upstream keeps its own text rules.
+* -text

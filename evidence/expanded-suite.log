@@ -1,0 +1,49 @@
+START 1/12 zero-right ['zero']
+baseline: 11794.48 ms engine median; 680 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\zero-right\report.html
+START 2/12 all-10 ['dense']
+baseline: 1752.70 ms engine median; 80 Slash
+optimized: 1644.17 ms engine median; 80 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\all-10\report.html
+START 3/12 small-left ['asymmetric']
+baseline: 3719.88 ms engine median; 140 Slash
+optimized: 3335.25 ms engine median; 140 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\small-left\report.html
+START 4/12 all-100 ['dense']
+baseline: 12938.61 ms engine median; 800 Slash
+optimized: 13051.12 ms engine median; 800 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\all-100\report.html
+START 5/12 sparse ['sparse']
+baseline: 6255.49 ms engine median; 460 Slash
+optimized: 3359.70 ms engine median; 210 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\sparse\report.html
+START 6/12 random-2 ['dense']
+baseline: 9121.76 ms engine median; 482 Slash
+optimized: 10038.21 ms engine median; 482 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\random-2\report.html
+START 7/12 random-1 ['dense']
+baseline: 7827.56 ms engine median; 468 Slash
+optimized: 7233.84 ms engine median; 418 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\random-1\report.html
+START 8/12 large-left ['asymmetric']
+baseline: 10511.87 ms engine median; 680 Slash
+optimized: 2615.71 ms engine median; 140 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\large-left\report.html
+START 9/12 all-25 ['dense']
+baseline: 3559.74 ms engine median; 200 Slash
+optimized: 3463.00 ms engine median; 200 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\all-25\report.html
+START 10/12 single-nonzero ['sparse']
+baseline: 3480.06 ms engine median; 200 Slash
+optimized: 2167.82 ms engine median; 100 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\single-nonzero\report.html
+START 11/12 zero-left ['zero']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\zero-left\report.html
+START 12/12 all-50 ['dense']
+baseline: 7542.64 ms engine median; 400 Slash
+optimized: 7736.43 ms engine median; 400 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\cases\all-50\report.html
+FINISHED 12/12 passed, 0 failed: C:\Users\rana608\Music\����ɱGEMM\evidence\expanded\suite-v1\report.html

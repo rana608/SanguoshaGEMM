@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "name": "sgemm-suite-v1",
+  "seed": 20261103,
+  "orderSeed": 20261104,
+  "candidateCount": 1,
+  "uniqueInputs": 1,
+  "familyLabels": {
+    "dense-low": "稠密小数值 1–3",
+    "dense-uniform": "稠密均匀 1–9",
+    "dense-high": "稠密大数值 7–9",
+    "large-left": "左大右小（7–9 × 1–3）",
+    "small-left": "左小右大（1–3 × 7–9）",
+    "mixed": "均匀含零 0–9",
+    "sparse-50": "独立 50% 置零",
+    "sparse-75": "独立 75% 置零",
+    "boundary": "边界与固定回归"
+  },
+  "policy": "Generated before timing. Deduplicate exact A/B pairs; keep all family labels. No identity-matrix performance fixture.",
+  "cases": [
+    {
+      "A": [
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-086",
+      "inputFile": "case-086.json",
+      "inputSha256": "0597bccc00612ebd5b98c63ab25cb75d94930ee12d1d75d0de91046a88c0bbf8"
+    }
+  ]
+}

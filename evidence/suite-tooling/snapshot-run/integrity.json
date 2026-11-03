@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cases": 1,
+  "nativeRecords": 4,
+  "htmlReports": 2,
+  "shapes": [
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "full2x2": 0,
+  "summarySha256": "484a847f7601ac23e7f0aaeabdbd2f7143438d107b416c20fc04dfabf7c93811",
+  "methodSha256": "1ffb0bfc47ddee7304ef4d852b0844bbfa9b53770066de846d88063f522f2d61"
+}

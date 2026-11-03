@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "A": [
+    [
+      1
+    ]
+  ],
+  "B": [
+    [
+      1
+    ]
+  ],
+  "C": [
+    [
+      1
+    ]
+  ],
+  "speed": 2,
+  "inputSha256": "0597bccc00612ebd5b98c63ab25cb75d94930ee12d1d75d0de91046a88c0bbf8",
+  "createdShanghai": "20261103-162534-848964",
+  "warmupRuns": 1,
+  "measuredRuns": 1,
+  "p95Method": "nearest-rank",
+  "order": "alternating; sequential processes",
+  "timing": "engineMs excludes startup, setup, intentional delays and rendering; computeMs=setup+runWallMs; processWallMs includes startup and output",
+  "results": [
+    {
+      "edition": "baseline",
+      "algorithm": "baseline-v1",
+      "samplesMs": [
+        2.9955
+      ],
+      "medianMs": 2.9955,
+      "p95Ms": 2.9955,
+      "medianPrepareMs": 0.8158,
+      "medianRunWallMs": 3.3006,
+      "medianComputeMs": 4.1164000000000005,
+      "medianProcessWallMs": 215.0028000032762,
+      "medianProcessCpuMs": 234.375,
+      "peakWorkingSetBytes": 36003840,
+      "processWallSamplesMs": [
+        215.0028000032762
+      ],
+      "computeSamplesMs": [
+        4.1164000000000005
+      ],
+      "activeCardUses": 1,
+      "rescues": 1,
+      "fangzhu": 1,
+      "drawnCards": 1,
+      "judgements": 0,
+      "consumedCards": 2,
+      "transposed": false,
+      "peakWorkingSetMiB": 34.3359375,
+      "executableSha256": "ea1a300768c6c800f865acd9cb37b3aa80baa94977080f6ad9bcd3a764224dcd",
+      "speedupVsBaseline": 1.0
+    },
+    {
+      "edition": "optimized",
+      "algorithm": "transpose-v1.2",
+      "samplesMs": [
+        2.7343
+      ],
+      "medianMs": 2.7343,
+      "p95Ms": 2.7343,
+      "medianPrepareMs": 0.8112,
+      "medianRunWallMs": 3.03,
+      "medianComputeMs": 3.8411999999999997,
+      "medianProcessWallMs": 213.1733999995049,
+      "medianProcessCpuMs": 156.25,
+      "peakWorkingSetBytes": 35495936,
+      "processWallSamplesMs": [
+        213.1733999995049
+      ],
+      "computeSamplesMs": [
+        3.8411999999999997
+      ],
+      "activeCardUses": 1,
+      "rescues": 1,
+      "fangzhu": 1,
+      "drawnCards": 1,
+      "judgements": 0,
+      "consumedCards": 2,
+      "transposed": false,
+      "peakWorkingSetMiB": 33.8515625,
+      "executableSha256": "ac66aeac129c73081ed312b6e1964baff8ef90b742457df57456b2a041973a21",
+      "speedupVsBaseline": 1.0955271916029696
+    }
+  ]
+}

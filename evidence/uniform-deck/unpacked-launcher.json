@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "unpackedClientHashes": {
+    "baseline": "5f5b629669245d93277abc8c0df0862ca7794b2dc092585d8db01384443f44cb",
+    "optimized": "5556eba5d7c7d1276dd8e58864b11d21ce626ba1c8a52e0a75c84af4f965a6fc"
+  },
+  "realButtonLaunches": 2,
+  "childFolderLayout": true,
+  "offscreen": true
+}

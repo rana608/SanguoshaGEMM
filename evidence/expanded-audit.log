@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "cases": 12,
+  "nativeRecords": 96,
+  "htmlReports": 13,
+  "shapes": [
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "full2x2": 12,
+  "summarySha256": "5f6900539a10cca475f1761049bfe8c541b0abccaa6d864e2afbe6c11b582e2f",
+  "methodSha256": "83466f125e2eafe5ec968e81e8dffa915f8726b3e2e923a90e4277265fbd566a",
+  "fixedReserve": 131072,
+  "attackCapacity": 800,
+  "rescueCapacity": 800,
+  "distinctCardIdentities": true,
+  "taskSchedulesChecked": true,
+  "maxOutputPerPlayer": 20000,
+  "maxDrawnPerCase": 80000
+}

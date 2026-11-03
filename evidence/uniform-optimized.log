@@ -1,0 +1,15 @@
+optimized zero complete [[0, 0], [0, 0]]
+optimized one complete [[1]]
+optimized scalar-9 complete [[81]]
+optimized scalar-10 complete [[100]]
+optimized example complete [[4, 5], [6, 3]]
+optimized all-9 complete [[162, 162], [162, 162]]
+optimized all-100 complete [[20000, 20000], [20000, 20000]]
+optimized rectangle complete [[112], [135]]
+optimized zero-right complete [[0, 0], [0, 0]]
+optimized controls complete [[4, 5], [6, 3]]
+optimized no-rescue failed [[0, 0], [0, 0]]
+optimized empty-deck failed [[0, 0], [0, 0]]
+optimized no-range failed [[0, 0], [0, 0]]
+PASS 13
+PASS 21 (including exact state/action replay)

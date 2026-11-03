@@ -1,0 +1,4 @@
+{
+    "error": "This optimized executable only supports transpose-v1.2",
+    "status": "invalid-input"
+}

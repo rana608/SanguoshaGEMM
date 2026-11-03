@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "A": [
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      7
+    ]
+  ],
+  "B": [
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "C": [
+    [
+      15,
+      37
+    ],
+    [
+      15,
+      38
+    ]
+  ],
+  "speed": 2,
+  "inputSha256": "11894ac42cb79f09bed0e6f8709e638e81072647443f21362ffaa9e737725213",
+  "createdShanghai": "20261103-162035-077111",
+  "warmupRuns": 1,
+  "measuredRuns": 10,
+  "p95Method": "nearest-rank",
+  "order": "alternating; sequential processes",
+  "timing": "engineMs excludes startup, setup, intentional delays and rendering; computeMs=setup+runWallMs; processWallMs includes startup and output",
+  "results": [
+    {
+      "edition": "baseline",
+      "algorithm": "baseline-v1",
+      "samplesMs": [
+        952.8241,
+        840.4789,
+        882.9217,
+        866.3674,
+        851.9501,
+        884.2373,
+        818.2653,
+        807.5271,
+        866.8822,
+        813.762
+      ],
+      "medianMs": 859.15875,
+      "p95Ms": 952.8241,
+      "medianPrepareMs": 3.84825,
+      "medianRunWallMs": 884.34375,
+      "medianComputeMs": 887.9295500000001,
+      "medianProcessWallMs": 1139.355949999299,
+      "medianProcessCpuMs": 1132.8125,
+      "peakWorkingSetBytes": 36978688,
+      "processWallSamplesMs": [
+        1307.0468000078108,
+        1152.9656000057003,
+        1184.1844000009587,
+        1160.5749000009382,
+        1110.752600012347,
+        1151.804200009792,
+        1075.3081000002567,
+        1056.96750000061,
+        1126.9076999888057,
+        1054.1121999995084
+      ],
+      "computeSamplesMs": [
+        987.481,
+        871.0204,
+        914.3921,
+        897.2458,
+        881.0229,
+        914.8830999999999,
+        845.4038,
+        834.9585,
+        894.8362,
+        840.635
+      ],
+      "activeCardUses": 60,
+      "rescues": 60,
+      "fangzhu": 60,
+      "drawnCards": 105,
+      "judgements": 0,
+      "consumedCards": 120,
+      "transposed": false,
+      "peakWorkingSetMiB": 35.265625,
+      "executableSha256": "ea1a300768c6c800f865acd9cb37b3aa80baa94977080f6ad9bcd3a764224dcd",
+      "speedupVsBaseline": 1.0
+    },
+    {
+      "edition": "optimized",
+      "algorithm": "transpose-v1.2",
+      "samplesMs": [
+        210.8505,
+        202.3292,
+        209.0449,
+        198.4828,
+        206.436,
+        194.0555,
+        194.9191,
+        185.2636,
+        185.6468,
+        190.5481
+      ],
+      "medianMs": 196.70094999999998,
+      "p95Ms": 210.8505,
+      "medianPrepareMs": 3.70785,
+      "medianRunWallMs": 202.94395,
+      "medianComputeMs": 206.87215,
+      "medianProcessWallMs": 459.66124999540625,
+      "medianProcessCpuMs": 445.3125,
+      "peakWorkingSetBytes": 36741120,
+      "processWallSamplesMs": [
+        482.6633999909973,
+        493.8535000110278,
+        463.7125999870477,
+        469.4308999896748,
+        455.6099000037648,
+        420.1474000001326,
+        468.1214000011096,
+        425.4450000007637,
+        413.9341999980388,
+        412.38709999015555
+      ],
+      "computeSamplesMs": [
+        222.2081,
+        212.9651,
+        220.2578,
+        209.2336,
+        216.0142,
+        204.379,
+        204.5107,
+        194.47330000000002,
+        195.27530000000002,
+        199.7875
+      ],
+      "activeCardUses": 14,
+      "rescues": 14,
+      "fangzhu": 14,
+      "drawnCards": 105,
+      "judgements": 0,
+      "consumedCards": 28,
+      "transposed": true,
+      "peakWorkingSetMiB": 35.0390625,
+      "executableSha256": "ac66aeac129c73081ed312b6e1964baff8ef90b742457df57456b2a041973a21",
+      "speedupVsBaseline": 4.367842402387991
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+diff --git a/QSanguosha.pro b/QSanguosha.pro
+index a69f7c6..ee2f066 100644
+--- a/QSanguosha.pro
++++ b/QSanguosha.pro
+@@ -6,7 +6,18 @@ QT += network widgets
+ !winrt: QT += declarative
+ TEMPLATE = app
+ 
+-CONFIG += lua
++CONFIG += lua c++11
++SOURCES += src/scenario/gemm.cpp src/dialog/gemm-dialog.cpp
++HEADERS += src/scenario/gemm.h src/dialog/gemm-dialog.h
++HEADERS += src/scenario/gemm-edition.h
++isEmpty(GEMM_EDITION): GEMM_EDITION = baseline
++equals(GEMM_EDITION, baseline) {
++    SOURCES += src/scenario/gemm-edition-baseline.cpp
++} else:equals(GEMM_EDITION, optimized) {
++    SOURCES += src/scenario/gemm-edition-optimized.cpp
++} else {
++    error("GEMM_EDITION must be baseline or optimized")
++}
+ 
+ CONFIG -= flat
+ 
+diff --git a/src/client/client.cpp b/src/client/client.cpp
+index f9e3a52..d301142 100644
+--- a/src/client/client.cpp
++++ b/src/client/client.cpp
+@@ -359,6 +359,8 @@ void Client::updateProperty(const QVariant &arg)
+     ClientPlayer *player = getPlayer(object_name);
+     if (!player) return;
+     player->setProperty(args[1].toString().toLatin1().constData(), args[2].toString());
++    if (ServerInfo.GameMode == "gemm" && args[1].toString() == "screenname")
++        QMetaObject::invokeMethod(player, "general_changed");
+ }
+ 
+ void Client::removePlayer(const QVariant &player_name)
+diff --git a/src/core/engine.cpp b/src/core/engine.cpp
+index 1bc62cb..daddfe7 100644
+--- a/src/core/engine.cpp
++++ b/src/core/engine.cpp
+@@ -1,4 +1,5 @@
+-﻿#include "engine.h"
++#include "engine.h"
++#include "gemm.h"
+ #include "card.h"
+ #include "client.h"
+ #include "ai.h"
+@@ -365,7 +366,9 @@ Engine::~Engine()
+ 
+ QStringList Engine::getModScenarioNames() const
+ {
+-    return m_scenarios.keys();
++    QStringList names=m_scenarios.keys();
++    names.removeAll("gemm"); // Requires matrix input through its dedicated entry point.
++    return names;
+ }
+ 
+ void Engine::addScenario(Scenario *scenario)
+@@ -1294,7 +1297,13 @@ QList<int> Engine::getRandomCards() const
+         exclude_disaters = true;
+ 
+     QList<int> list;
++    const QString gemmDeck = Config.GameMode == "gemm" ? Gemm::deckPackage() : QString();
+     foreach (Card *card, cards) {
++        if (Config.GameMode == "gemm") {
++            if (card->getPackage() == gemmDeck) list << card->getId();
++            continue;
++        }
++        if (card->getPackage().startsWith("gemm_cards")) continue;
+         card->clearFlags();
+ 
+         QStringList banned_patterns = Config.value("Banlist/Cards").toStringList();
+diff --git a/src/core/settings.cpp b/src/core/settings.cpp
+index d37cfe1..8d9469e 100644
+--- a/src/core/settings.cpp
++++ b/src/core/settings.cpp
+@@ -2,6 +2,17 @@
+ #include "photo.h"
+ #include "card.h"
+ #include "engine.h"
++#include "gemm-edition.h"
++#ifdef Q_OS_WIN32
++#include <windows.h>
++static QString editionSettingsPath()
++{
++    // Config is constructed before main(), so changing cwd there is too late.
++    wchar_t path[32768];DWORD length=GetModuleFileNameW(NULL,path,32768);
++    QString directory=length?QFileInfo(QString::fromWCharArray(path,int(length))).absolutePath():QDir::homePath();
++    return QDir(directory).absoluteFilePath("config-"+Gemm::edition()+".ini");
++}
++#endif
+ 
+ Settings Config;
+ 
+@@ -18,9 +29,9 @@ const int Settings::S_JUDGE_LONG_DELAY = 800;
+ 
+ Settings::Settings()
+ #ifdef Q_OS_WIN32
+-    : QSettings("config.ini", QSettings::IniFormat),
++    : QSettings(editionSettingsPath(), QSettings::IniFormat),
+ #else
+-    : QSettings("QSanguosha.org", "QSanguosha"),
++    : QSettings("QSanguosha.org", "QSanguoshaGEMM-"+Gemm::edition()),
+ #endif
+     Rect(-ViewWidth / 2, -ViewHeight / 2, ViewWidth, ViewHeight)
+ {
+diff --git a/src/dialog/mainwindow.cpp b/src/dialog/mainwindow.cpp
+index 763ba93..6df6879 100644
+--- a/src/dialog/mainwindow.cpp
++++ b/src/dialog/mainwindow.cpp
+@@ -1,4 +1,12 @@
+-﻿#include "mainwindow.h"
++#include "mainwindow.h"
++#include "gemm.h"
++#include "gemm-edition.h"
++#include "gemm-dialog.h"
++#include "room.h"
++#include "roomthread.h"
++#include <QJsonDocument>
++#include <QJsonArray>
++#include <QSaveFile>
+ #include "startscene.h"
+ #include "roomscene.h"
+ #include "server.h"
+@@ -66,7 +74,7 @@ MainWindow::MainWindow(QWidget *parent)
+ {
+     ui->setupUi(this);
+ 
+-    setWindowTitle(tr("Sanguosha") + " " + Sanguosha->getVersionNumber());
++    setWindowTitle(tr("Sanguosha") + " " + Sanguosha->getVersionNumber()+" · "+Gemm::editionTitle());
+ 
+     scene = NULL;
+ 
+@@ -83,7 +91,10 @@ MainWindow::MainWindow(QWidget *parent)
+ 
+     StartScene *start_scene = new StartScene;
+ 
++    QAction *gemmAction = new QAction(QString::fromUtf8("矩阵演武"), this);
++    connect(gemmAction, SIGNAL(triggered()), this, SLOT(startGemm()));
+     QList<QAction *> actions;
++    actions << gemmAction;
+     actions << ui->actionStart_Game
+         << ui->actionStart_Server
+         << ui->actionReplay
+@@ -131,6 +142,10 @@ void MainWindow::restoreFromConfig()
+ 
+ void MainWindow::closeEvent(QCloseEvent *)
+ {
++    if (Gemm::active()) {
++        Gemm::cancel();
++        if(server) foreach(Room *r,server->findChildren<Room *>()) {if(r->getThread()) r->getThread()->wait(); r->wait();}
++    }
+     Config.setValue("WindowSize", size());
+     Config.setValue("WindowPosition", pos());
+     Config.setValue("WindowState", (int)windowState());
+@@ -340,10 +355,19 @@ void MainWindow::enterRoom()
+     connect(room_scene, SIGNAL(game_over_dialog_rejected()), this, SLOT(enableDialogButtons()));
+ 
+     gotoScene(room_scene);
++    if (Gemm::active()) QTimer::singleShot(250, this, [](){ ClientInstance->addRobot(-1); });
+ }
+ 
+ void MainWindow::gotoStartScene()
+ {
++    if (Gemm::active()) {
++        Gemm::cancel();
++        if(server) foreach(Room *r,server->findChildren<Room *>()) {if(r->getThread()) r->getThread()->wait(); r->wait();}
++        QToolBar *bar=findChild<QToolBar *>("gemmToolbar"); if(bar) {removeToolBar(bar);delete bar;}
++        view->setUpdatesEnabled(true);
++        QToolBar *results=findChild<QToolBar *>("gemmResults");if(results) {removeToolBar(results);delete results;}
++        Config.init();
++    }
+     ServerInfo.DuringGame = false;
+     delete systray;
+     systray = NULL;
+@@ -359,7 +383,10 @@ void MainWindow::gotoStartScene()
+ 
+     StartScene *start_scene = new StartScene;
+ 
++    QAction *gemmAction = new QAction(QString::fromUtf8("矩阵演武"), this);
++    connect(gemmAction, SIGNAL(triggered()), this, SLOT(startGemm()));
+     QList<QAction *> actions;
++    actions << gemmAction;
+     actions << ui->actionStart_Game
+         << ui->actionStart_Server
+         << ui->actionReplay
+@@ -927,4 +954,94 @@ void MainWindow::on_actionAbout_GPLv3_triggered()
+ QGraphicsScene* MainWindow::getScene()
+ {
+ 	return scene;
+-}
+\ No newline at end of file
++}
++
++void MainWindow::startGemm()
++{
++    QString state=Gemm::snapshot().value("status").toString();
++    if (Gemm::active() && (state=="running" || state=="preparing")) {
++        QMessageBox::information(this,QString::fromUtf8("矩阵演武"),QString::fromUtf8("请先完成或停止当前演武。")); return;
++    }
++    GemmDialog dialog(this);
++    if(dialog.exec()==QDialog::Accepted) launchGemm(dialog.input());
++}
++
++void MainWindow::launchGemm(const QJsonObject &input)
++{
++    Gemm::cancel();
++    if(server) {
++        foreach(Room *r,server->findChildren<Room *>()) {
++            if(r->getThread()) r->getThread()->wait();
++            r->wait();
++        }
++    }
++    QToolBar *old=findChild<QToolBar *>("gemmToolbar");
++    if(old) {removeToolBar(old);delete old;}
++    QToolBar *oldResults=findChild<QToolBar *>("gemmResults");
++    if(oldResults) {removeToolBar(oldResults);delete oldResults;}
++    if(scene && scene->inherits("RoomScene")) gotoStartScene();
++    QString error;if(!Gemm::configure(input,error)) {QMessageBox::warning(this,"GEMM",error);return;}
++    Config.GameMode="gemm";Config.RandomSeat=false;Config.Enable2ndGeneral=false;Config.EnableBasara=false;
++    Config.EnableHegemony=false;Config.EnableAI=true;Config.EnableCheat=false;Config.CountDownSeconds=0;
++    Config.AIDelay=0;Config.OriginAIDelay=0;Config.EnableLuckCard=false;
++    server=new Server(this);
++    if(!server->listen()) {QMessageBox::warning(this,"GEMM",QString::fromUtf8("本地端口被占用，无法启动牌桌。"));delete server;server=NULL;return;}
++    Config.HostAddress=QString("127.0.0.1:%1").arg(Config.ServerPort);
++    QToolBar *bar=new QToolBar(QString::fromUtf8("矩阵演武"),this);bar->setObjectName("gemmToolbar");
++    bar->setMovable(false);addToolBar(Qt::TopToolBarArea,bar);
++    QAction *pauseAction=bar->addAction(QString::fromUtf8("暂停"));pauseAction->setCheckable(true);
++    connect(pauseAction,&QAction::toggled,[pauseAction](bool p){Gemm::pause(p);pauseAction->setText(QString::fromUtf8(p?"继续":"暂停"));});
++    QAction *single=bar->addAction(QString::fromUtf8("单步"));
++    connect(single,&QAction::triggered,[pauseAction](){pauseAction->setChecked(true);Gemm::step();});
++    QComboBox *speedBox=new QComboBox(bar);
++    speedBox->addItems(QStringList()<<QString::fromUtf8("正常")<<QString::fromUtf8("加速")<<QString::fromUtf8("极速 / 无动画"));
++    speedBox->setCurrentIndex(input.value("speed").toInt());bar->addWidget(speedBox);
++    connect(speedBox,static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged),[](int n){Gemm::setSpeed(n);});
++    QAction *stop=bar->addAction(QString::fromUtf8("停止"));connect(stop,&QAction::triggered,[](){Gemm::cancel();});
++    QAction *again=bar->addAction(QString::fromUtf8("重播"));again->setEnabled(false);
++    connect(again,&QAction::triggered,[this,input](){launchGemm(input);});
++    QAction *newInput=bar->addAction(QString::fromUtf8("新矩阵"));newInput->setEnabled(false);
++    connect(newInput,SIGNAL(triggered()),this,SLOT(startGemm()));
++    QAction *save=bar->addAction(QString::fromUtf8("保存记录"));save->setEnabled(false);
++    connect(save,&QAction::triggered,[this]() {
++        QString directory=QCoreApplication::applicationDirPath()+"/records/"+Gemm::edition();
++        QDir().mkpath(directory);
++        QString suggested=directory+"/"+QDateTime::currentDateTime().toString("yyyyMMdd-HHmmss-zzz")+".json";
++        QString path=QFileDialog::getSaveFileName(this,QString::fromUtf8("保存计算记录"),suggested,"JSON (*.json)");
++        if(path.isEmpty())return;QSaveFile file(path);
++        if(!file.open(QIODevice::WriteOnly)) {QMessageBox::warning(this,"GEMM",file.errorString());return;}
++        file.write(QJsonDocument(Gemm::snapshot()).toJson());if(!file.commit()) QMessageBox::warning(this,"GEMM",file.errorString());
++    });
++    QToolBar *resultBar=new QToolBar(QString::fromUtf8("计算结果"),this);
++    resultBar->setObjectName("gemmResults");resultBar->setMovable(false);addToolBar(Qt::BottomToolBarArea,resultBar);
++    QLabel *status=new QLabel(resultBar);resultBar->addWidget(status);
++    QList<QPushButton *> results;
++    for(int i=0;i<input.value("A").toArray().size();++i) for(int j=0;j<input.value("B").toArray().first().toArray().size();++j) {
++        QPushButton *button=new QPushButton(QString("C%1%2=0").arg(i+1).arg(j+1),resultBar);resultBar->addWidget(button);results<<button;
++        connect(button,&QPushButton::clicked,[this,i,j](){
++            QString name;
++            foreach(QJsonValue v,Gemm::snapshot().value("initialPlayers").toArray()) {
++                QJsonObject o=v.toObject();if(o["label"].toString()==QString("C[%1,%2]").arg(i+1).arg(j+1)) name=o["id"].toString();
++            }
++            if(!name.isEmpty()) QMetaObject::invokeMethod(scene,"highlightGemmPlayer",Q_ARG(QString,name));
++        });
++    }
++    QTimer *timer=new QTimer(bar);
++    connect(timer,&QTimer::timeout,[this,status,again,newInput,save,pauseAction,single,stop,results,input,timer](){
++        QJsonObject r=Gemm::snapshot();QString state=r["status"].toString();
++        bool done=state=="complete" || state=="failed";
++        again->setEnabled(done);newInput->setEnabled(done);save->setEnabled(done);
++        pauseAction->setEnabled(!done);single->setEnabled(!done);stop->setEnabled(!done);
++        view->setUpdatesEnabled(!(Gemm::speed()==2 && state=="running" && !r["paused"].toBool()));
++        QString text=QString::fromUtf8("  %1/%2 杀 · %3 ms  ").arg(r["completed"].toInt()).arg(r["tasks"].toInt()).arg(r["engineMs"].toDouble(),0,'f',2);
++        if(state=="complete")text+=QString::fromUtf8("已完成  ");
++        if(state=="failed")text+=QString::fromUtf8("已停止：")+r["error"].toString();
++        status->setText(text);
++        QJsonArray c=r["C"].toArray();int idx=0;
++        for(int i=0;i<c.size();++i) for(int j=0;j<c[i].toArray().size();++j) {
++            if(idx<results.size())results[idx++]->setText(QString("C%1%2=%3").arg(i+1).arg(j+1).arg(c[i].toArray()[j].toInt()));
++        }
++        if(done) {view->viewport()->update();timer->stop();}
++    });
++    timer->start(100);startConnection();
++}
+diff --git a/src/dialog/mainwindow.h b/src/dialog/mainwindow.h
+index 617ca96..e66e7e0 100644
+--- a/src/dialog/mainwindow.h
++++ b/src/dialog/mainwindow.h
+@@ -1,7 +1,8 @@
+-﻿#ifndef _MAIN_WINDOW_H
++#ifndef _MAIN_WINDOW_H
+ #define _MAIN_WINDOW_H
+ 
+ #include "src/pch.h"
++#include <QJsonObject>
+ 
+ namespace Ui {
+     class MainWindow;
+@@ -66,6 +67,8 @@ private:
+ 
+ public slots:
+     void startConnection();
++    void startGemm();
++    void launchGemm(const QJsonObject &input);
+ 
+ private slots:
+     void on_actionAbout_GPLv3_triggered();
+diff --git a/src/main.cpp b/src/main.cpp
+index 93e55f2..be781c8 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -1,4 +1,5 @@
+ #include <cstring>
++#include "gemm.h"
+ 
+ #include "mainwindow.h"
+ #include "settings.h"
+@@ -31,6 +32,7 @@ int main(int argc, char *argv[]) {
+ int main(int argc, char *argv[])
+ {
+ #endif
++    for (int i=1;i<argc;++i) if(strcmp(argv[i],"--gemm-case")==0) qputenv("QT_QPA_PLATFORM","offscreen");
+     if (argc > 1 && strcmp(argv[1], "-server") == 0) {
+         new QCoreApplication(argc, argv);
+     } else if (argc > 1 && strcmp(argv[1], "-manual") == 0) {
+@@ -41,6 +43,10 @@ int main(int argc, char *argv[])
+         new QApplication(argc, argv);
+     }
+ 
++    const QDir invocationDirectory=QDir::current();
++#ifdef Q_OS_WIN
++    QDir::setCurrent(QCoreApplication::applicationDirPath());
++#endif
+     QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath() + "/plugins");
+ 
+ #ifdef Q_OS_MAC
+@@ -70,6 +76,15 @@ int main(int argc, char *argv[])
+ 
+     Sanguosha = new Engine;
+     Config.init();
++    Gemm::registerPackages();
++    Sanguosha->addTranslationEntry("gemm", "矩阵演武");
++    Sanguosha->addTranslationEntry("#GemmStep", "第 %arg / %arg2 步：%from 对 %to 执行乘加");
++    int caseIndex = qApp->arguments().indexOf("--gemm-case");
++    if (caseIndex > 0) {
++        if(qApp->arguments().size()!=caseIndex+3) return 2;
++        return Gemm::commandLine(invocationDirectory.absoluteFilePath(qApp->arguments()[caseIndex+1]),
++                                 invocationDirectory.absoluteFilePath(qApp->arguments()[caseIndex+2]));
++    }
+     qApp->setFont(Config.AppFont);
+     BanPair::loadBanPairs();
+ 
+@@ -101,6 +116,8 @@ int main(int argc, char *argv[])
+ 
+     Sanguosha->setParent(main_window);
+     main_window->show();
++    if (qApp->arguments().contains("--gemm"))
++        QTimer::singleShot(200, main_window, SLOT(startGemm()));
+ 
+     foreach (QString arg, qApp->arguments()) {
+         if (arg.startsWith("-connect:")) {
+diff --git a/src/server/room.cpp b/src/server/room.cpp
+index b05f005..0f9322c 100644
+--- a/src/server/room.cpp
++++ b/src/server/room.cpp
+@@ -1,4 +1,5 @@
+-﻿#include "room.h"
++#include "room.h"
++#include "gemm.h"
+ #include "engine.h"
+ #include "settings.h"
+ #include "standard.h"
+@@ -3768,7 +3769,7 @@ void Room::startGame()
+         player->setMaxHp(player->getGeneralMaxHp());
+         player->setHp(player->getMaxHp());
+         // setup AI
+-        AI *ai = cloneAI(player);
++        AI *ai = mode == "gemm" ? new GemmAI(player) : cloneAI(player);
+         ais << ai;
+         player->setAI(ai);
+     }
+diff --git a/src/server/roomthread.cpp b/src/server/roomthread.cpp
+index 86c06e2..c8c2c90 100644
+--- a/src/server/roomthread.cpp
++++ b/src/server/roomthread.cpp
+@@ -1,4 +1,5 @@
+-﻿#include "roomthread.h"
++#include "roomthread.h"
++#include "gemm.h"
+ #include "room.h"
+ #include "engine.h"
+ #include "gamerule.h"
+@@ -594,6 +595,11 @@ void RoomThread::run()
+         }
+         constructTriggerTable();
+         trigger(GameStart, (Room *)room, NULL);
++        if (room->getMode() == "gemm") {
++            Gemm::run(room);
++            Sanguosha->unregisterRoom();
++            return;
++        }
+         if (room->getMode() == "06_3v3") {
+             run3v3(first, second, game_rule, first.first());
+         } else if (room->getMode() == "04_1v3") {
+@@ -754,6 +760,7 @@ void RoomThread::addTriggerSkill(const TriggerSkill *skill)
+ 
+ void RoomThread::delay(long secs)
+ {
++    if (room->getMode() == "gemm") return;
+     if (secs == -1) secs = Config.AIDelay;
+     Q_ASSERT(secs >= 0);
+     if (room->property("to_test").toString().isEmpty() && Config.AIDelay > 0)
+diff --git a/src/server/serverplayer.cpp b/src/server/serverplayer.cpp
+index 781e49e..79a8ed8 100644
+--- a/src/server/serverplayer.cpp
++++ b/src/server/serverplayer.cpp
+@@ -1,4 +1,5 @@
+-﻿#include "serverplayer.h"
++#include "serverplayer.h"
++#include "gemm.h"
+ #include "skill.h"
+ #include "engine.h"
+ #include "standard.h"
+@@ -913,6 +914,7 @@ void ServerPlayer::setAI(AI *ai)
+ 
+ AI *ServerPlayer::getAI() const
+ {
++    if (getRoom()->getMode() == "gemm") return ai;
+     if (getState() == "online")
+         return NULL;
+     else if (getState() == "trust" && !Config.EnableCheat)
+diff --git a/src/ui/carditem.cpp b/src/ui/carditem.cpp
+index 53f2869..0a06291 100644
+--- a/src/ui/carditem.cpp
++++ b/src/ui/carditem.cpp
+@@ -1,4 +1,5 @@
+ #include "carditem.h"
++#include "gemm.h"
+ #include "engine.h"
+ #include "skill.h"
+ #include "clientplayer.h"
+@@ -133,6 +134,7 @@ QAbstractAnimation *CardItem::getGoBackAnimation(bool doFade, bool smoothTransit
+     QPropertyAnimation *goback = new QPropertyAnimation(this, "pos");
+     goback->setEndValue(home_pos);
+     goback->setEasingCurve(QEasingCurve::OutQuad);
++    if (Gemm::active()) duration = Gemm::speed() == 2 ? 0 : (Gemm::speed() == 1 ? duration / 8 : duration);
+     goback->setDuration(duration);
+ 
+     if (doFade) {
+diff --git a/src/ui/roomscene.cpp b/src/ui/roomscene.cpp
+index d25dcbe..be88948 100644
+--- a/src/ui/roomscene.cpp
++++ b/src/ui/roomscene.cpp
+@@ -1,4 +1,5 @@
+-﻿#include "roomscene.h"
++#include "roomscene.h"
++#include "gemm.h"
+ #include "settings.h"
+ #include "carditem.h"
+ #include "engine.h"
+@@ -3916,6 +3917,7 @@ void RoomScene::moveFocus(const QStringList &players, Countdown countdown)
+ 
+ void RoomScene::setEmotion(const QString &who, const QString &emotion)
+ {
++    if (Gemm::active() && Gemm::speed() == 2) return;
+     bool permanent = (emotion == "question" || emotion == "no-question");
+     if (emotion.startsWith("weapon/") || emotion.startsWith("armor/")) {
+         if (Config.value("NoEquipAnim", false).toBool()) return;
+@@ -4177,8 +4179,14 @@ void RoomScene::doIndicate(const QString &, const QStringList &args)
+     showIndicator(args.first(), args.last());
+ }
+ 
++void RoomScene::highlightGemmPlayer(const QString &name)
++{
++    if(Gemm::active() && Self) doIndicate(QString(),QStringList()<<Self->objectName()<<name);
++}
++
+ void RoomScene::doAnimation(int name, const QStringList &args)
+ {
++    if (Gemm::active() && Gemm::speed() == 2) return;
+     static QMap<AnimateType, AnimationFunc> map;
+     if (map.isEmpty()) {
+         map[S_ANIMATE_NULLIFICATION] = &RoomScene::doMovingAnimation;
+diff --git a/src/ui/roomscene.h b/src/ui/roomscene.h
+index 6571da5..6107d33 100644
+--- a/src/ui/roomscene.h
++++ b/src/ui/roomscene.h
+@@ -404,6 +404,7 @@ private slots:
+     void setEmotion(const QString &who, const QString &emotion);
+     void showSkillInvocation(const QString &who, const QString &skill_name);
+     void doAnimation(int name, const QStringList &args);
++    void highlightGemmPlayer(const QString &name);
+     void showOwnerButtons(bool owner);
+     void showPlayerCards();
+     void updateRolesBox();
+diff --git a/src/util/nativesocket.cpp b/src/util/nativesocket.cpp
+index bc2466e..3e98d37 100644
+--- a/src/util/nativesocket.cpp
++++ b/src/util/nativesocket.cpp
+@@ -1,4 +1,4 @@
+-﻿#include "nativesocket.h"
++#include "nativesocket.h"
+ #include "settings.h"
+ #include "src/pch.h"
+ 
+@@ -11,7 +11,12 @@ NativeServerSocket::NativeServerSocket()
+ 
+ bool NativeServerSocket::listen()
+ {
+-    return server->listen(QHostAddress::Any, Config.ServerPort);
++    if(Config.GameMode == "gemm") {
++        bool ok=server->listen(QHostAddress::LocalHost,0);
++        if(ok) Config.ServerPort=server->serverPort();
++        return ok;
++    }
++    return server->listen(QHostAddress::Any,Config.ServerPort);
+ }
+ 
+ void NativeServerSocket::daemonize()

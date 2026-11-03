@@ -1,0 +1,152 @@
+{
+  "passed": 25,
+  "cases": [
+    {
+      "name": "malformed",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "not-object",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "empty-object",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "empty",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "too-tall",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "too-wide",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "ragged",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "mismatch",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "negative",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "decimal",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "too-large",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "boolean",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "string",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "null",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "algorithm",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "speed-range",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "speed-decimal",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "speed-string",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "fault",
+      "exitCode": 2,
+      "status": "invalid-input"
+    },
+    {
+      "name": "original-baseline-v1",
+      "exitCode": 0,
+      "status": "complete"
+    },
+    {
+      "name": "replay-baseline-v1",
+      "exitCode": 0,
+      "status": "complete"
+    },
+    {
+      "name": "original-sparse-v1.1",
+      "exitCode": 0,
+      "status": "complete"
+    },
+    {
+      "name": "replay-sparse-v1.1",
+      "exitCode": 0,
+      "status": "complete"
+    },
+    {
+      "name": "original-transpose-v1.2",
+      "exitCode": 0,
+      "status": "complete"
+    },
+    {
+      "name": "replay-transpose-v1.2",
+      "exitCode": 0,
+      "status": "complete"
+    }
+  ],
+  "replayComparedFields": [
+    "A",
+    "B",
+    "algorithm",
+    "transposed",
+    "tasks",
+    "completed",
+    "status",
+    "C",
+    "initialPlayers",
+    "initialDrawPile",
+    "initialWeaponId",
+    "finalPlayers",
+    "trace",
+    "activeCardUses",
+    "rescues",
+    "damagePoints",
+    "fangzhu",
+    "drawnCards",
+    "consumedCards",
+    "judgements"
+  ]
+}

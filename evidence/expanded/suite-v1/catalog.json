@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "name": "expanded-v1",
+  "seed": 20261104,
+  "orderSeed": 20261105,
+  "elementMax": 100,
+  "candidateCount": 12,
+  "uniqueInputs": 12,
+  "cases": [
+    {
+      "id": "zero-right",
+      "A": [
+        [
+          100,
+          80
+        ],
+        [
+          70,
+          90
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "zero"
+      ],
+      "labels": [
+        "zero-right"
+      ],
+      "inputFile": "zero-right.json",
+      "inputSha256": "e470b05c54a2e4e68c5fa7357651fcb017108ee015f11cf85708964c7a854eef",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 1.0
+    },
+    {
+      "id": "all-10",
+      "A": [
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "B": [
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "all-10"
+      ],
+      "inputFile": "all-10.json",
+      "inputSha256": "f907ccdd4141f9e533aa0dd38b472c0e462fab209f935385e17856fa5682da7b",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "small-left",
+      "A": [
+        [
+          10,
+          20
+        ],
+        [
+          30,
+          10
+        ]
+      ],
+      "B": [
+        [
+          100,
+          80
+        ],
+        [
+          70,
+          90
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "asymmetric"
+      ],
+      "labels": [
+        "small-left"
+      ],
+      "inputFile": "small-left.json",
+      "inputSha256": "1f7bb532f9484092dd7e92223f9b0b9cab3445d70de67acd3dfd4b746d149d72",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "all-100",
+      "A": [
+        [
+          100,
+          100
+        ],
+        [
+          100,
+          100
+        ]
+      ],
+      "B": [
+        [
+          100,
+          100
+        ],
+        [
+          100,
+          100
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "all-100"
+      ],
+      "inputFile": "all-100.json",
+      "inputSha256": "c5e44c54c94e979d37830b6b8873514b4f66e1ccc1df085f9dd4ce3bd50cf6ef",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "sparse",
+      "A": [
+        [
+          100,
+          0
+        ],
+        [
+          70,
+          60
+        ]
+      ],
+      "B": [
+        [
+          0,
+          80
+        ],
+        [
+          50,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse"
+      ],
+      "labels": [
+        "sparse"
+      ],
+      "inputFile": "sparse.json",
+      "inputSha256": "1b697b473044577e5e6148a025f0a87252d919f9992c267c16c6b6acce795d30",
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.5
+    },
+    {
+      "id": "random-2",
+      "A": [
+        [
+          59,
+          10
+        ],
+        [
+          93,
+          79
+        ]
+      ],
+      "B": [
+        [
+          85,
+          89
+        ],
+        [
+          98,
+          19
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "random-2"
+      ],
+      "inputFile": "random-2.json",
+      "inputSha256": "e8e1ef8fdaadd5d2d93ce91ce00f3a7ab16bc97ae19182b38fdf5f0702a79a57",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "random-1",
+      "A": [
+        [
+          90,
+          36
+        ],
+        [
+          51,
+          57
+        ]
+      ],
+      "B": [
+        [
+          73,
+          85
+        ],
+        [
+          12,
+          39
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "random-1"
+      ],
+      "inputFile": "random-1.json",
+      "inputSha256": "5ddd6849052cca3969381481da134db8f284942e8ccbbdfa7178f14404ab1129",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "large-left",
+      "A": [
+        [
+          100,
+          80
+        ],
+        [
+          70,
+          90
+        ]
+      ],
+      "B": [
+        [
+          10,
+          20
+        ],
+        [
+          30,
+          10
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "asymmetric"
+      ],
+      "labels": [
+        "large-left"
+      ],
+      "inputFile": "large-left.json",
+      "inputSha256": "2b70b8fcc10cfdd516461d07f25fde5287311c6f07e54a3ddf23fb63aa44bcd1",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "all-25",
+      "A": [
+        [
+          25,
+          25
+        ],
+        [
+          25,
+          25
+        ]
+      ],
+      "B": [
+        [
+          25,
+          25
+        ],
+        [
+          25,
+          25
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "all-25"
+      ],
+      "inputFile": "all-25.json",
+      "inputSha256": "765f7297b2b1aee9782bdec8c850461ccabfc5b5285da52e1b43b7546b3916d9",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "single-nonzero",
+      "A": [
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse"
+      ],
+      "labels": [
+        "single-nonzero"
+      ],
+      "inputFile": "single-nonzero.json",
+      "inputSha256": "2469d69b3779f60ef3aed5f77848d26fb5ec5585e5f20fc35475109d2cae71c1",
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 0.75
+    },
+    {
+      "id": "zero-left",
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          100,
+          80
+        ],
+        [
+          70,
+          90
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "zero"
+      ],
+      "labels": [
+        "zero-left"
+      ],
+      "inputFile": "zero-left.json",
+      "inputSha256": "6184cb2bf55ba5783b4124adae9f599c56ac1782fb6f12b477719fca6ccd4173",
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 0.0
+    },
+    {
+      "id": "all-50",
+      "A": [
+        [
+          50,
+          50
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "B": [
+        [
+          50,
+          50
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense"
+      ],
+      "labels": [
+        "all-50"
+      ],
+      "inputFile": "all-50.json",
+      "inputSha256": "787d709888f78b98884ea6b527d79eca40acadb4e84f8ea9a2e021bd383de515",
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0
+    }
+  ],
+  "familyLabels": {
+    "dense": "稠密与数值阶梯",
+    "asymmetric": "左右数值不对称",
+    "sparse": "稀疏",
+    "zero": "零矩阵边界"
+  }
+}

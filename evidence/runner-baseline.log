@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "edition": "baseline",
+  "algorithm": "baseline-v1",
+  "C": [
+    [
+      9,
+      8
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "activeCardUses": 60,
+  "rescues": 60,
+  "fangzhu": 60,
+  "engineMs": 753.5376,
+  "error": null
+}
+C:\Users\rana608\Music\����ɱGEMM\evidence\baseline\20261103-154617-556308.json

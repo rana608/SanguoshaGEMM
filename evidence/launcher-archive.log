@@ -1,0 +1,19 @@
+Launcher ready: C:\Users\rana608\Music\����ɱGEMM\dist\SanguoshaGEMM-Launcher
+{
+  "file": "SanguoshaGEMM-unified-windows.zip",
+  "bytes": 610899672,
+  "sha256": "d00837d11526bb3cb4c7e3a9877be2d01cec226cac0dbb566c75549539239663",
+  "launcherSha256": "97dd8ad1f25166bdd0d2b8ace17fdbb0e86c0557c8781350bd08244f24705bf9",
+  "editions": {
+    "baseline": {
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d",
+      "engineTests": 127,
+      "recordTests": 21
+    },
+    "optimized": {
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4",
+      "engineTests": 127,
+      "recordTests": 21
+    }
+  }
+}

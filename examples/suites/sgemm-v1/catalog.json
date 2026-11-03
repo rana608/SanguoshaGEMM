@@ -1,0 +1,3318 @@
+{
+  "schemaVersion": 1,
+  "name": "sgemm-suite-v1",
+  "seed": 20261103,
+  "orderSeed": 20261104,
+  "candidateCount": 96,
+  "uniqueInputs": 96,
+  "familyLabels": {
+    "dense-low": "稠密小数值 1–3",
+    "dense-uniform": "稠密均匀 1–9",
+    "dense-high": "稠密大数值 7–9",
+    "large-left": "左大右小（7–9 × 1–3）",
+    "small-left": "左小右大（1–3 × 7–9）",
+    "mixed": "均匀含零 0–9",
+    "sparse-50": "独立 50% 置零",
+    "sparse-75": "独立 75% 置零",
+    "boundary": "边界与固定回归"
+  },
+  "policy": "Generated before timing. Deduplicate exact A/B pairs; keep all family labels. No identity-matrix performance fixture.",
+  "cases": [
+    {
+      "A": [
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "B": [
+        [
+          6,
+          8
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-001",
+      "inputFile": "case-001.json",
+      "inputSha256": "0cbbbdf48dafe0f1826ee1f109b6716dd58f888ec9b63c554a17b8719aedd3a1"
+    },
+    {
+      "A": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "B": [
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-002",
+      "inputFile": "case-002.json",
+      "inputSha256": "1bebe449865fbd247cfcd2af49222db55726c565e025e8cf73e0bfe538514a75"
+    },
+    {
+      "A": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "B": [
+        [
+          9
+        ],
+        [
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-003",
+      "inputFile": "case-003.json",
+      "inputSha256": "4e94e7594183f883f060dce033aacd38ab06c142bbbc05594eb5c8f36d4b7af8"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "B": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-004",
+      "inputFile": "case-004.json",
+      "inputSha256": "977d1bd07ecd5ba0b5af387706f6f33cf30c70ef0f5b7236c740ecef800279a4"
+    },
+    {
+      "A": [
+        [
+          0
+        ]
+      ],
+      "B": [
+        [
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 1.0,
+      "id": "case-005",
+      "inputFile": "case-005.json",
+      "inputSha256": "225aa73e7628319b02d37a711970965acef6401cd1164156cd69081a5960001f"
+    },
+    {
+      "A": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "B": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-006",
+      "inputFile": "case-006.json",
+      "inputSha256": "98c31f8454847ff27c4a998556c2c6b2de63e01c4b718ac76900396a449e85c7"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ]
+      ],
+      "B": [
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-007",
+      "inputFile": "case-007.json",
+      "inputSha256": "70d65256d1b0269799147886ddd1524a2167f3c39f166db64ceec3c8784eeb1e"
+    },
+    {
+      "A": [
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 1.0,
+      "id": "case-008",
+      "inputFile": "case-008.json",
+      "inputSha256": "77deb012df6f55a23b61b8254e57cd8e3a6dd1a4d45fb35da46afea3419d3585"
+    },
+    {
+      "A": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "B": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-009",
+      "inputFile": "case-009.json",
+      "inputSha256": "d3239120287d1737e2fa61f392fd151bbbb69f32313088bab3c5f251bed8d329"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ]
+      ],
+      "B": [
+        [
+          9
+        ],
+        [
+          9
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-010",
+      "inputFile": "case-010.json",
+      "inputSha256": "626421f33d0755f61f18e3c9d4af0a3afdad389ce966175972c75a3405e389a6"
+    },
+    {
+      "A": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "B": [
+        [
+          7,
+          7
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-011",
+      "inputFile": "case-011.json",
+      "inputSha256": "549f7a5b6d977aed01016b18ecd1ab8717e5664f855ebd83b64d78976054e074"
+    },
+    {
+      "A": [
+        [
+          2,
+          7
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.5,
+      "id": "case-012",
+      "inputFile": "case-012.json",
+      "inputSha256": "33cc5b50ef7c2f692aff8b2b2b1f5bd9f079d883cfbf8f82705dd564e4fdaf1e"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 1.0,
+      "id": "case-013",
+      "inputFile": "case-013.json",
+      "inputSha256": "7beb45fe9889e625b325afcae8c35b6c504a78e7189aa890cd8a36040a47a41c"
+    },
+    {
+      "A": [
+        [
+          4
+        ]
+      ],
+      "B": [
+        [
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-014",
+      "inputFile": "case-014.json",
+      "inputSha256": "baa10c3f9ad3cded6a819f82a0bd65d14555d695d2bdf347913084cdcd193a50"
+    },
+    {
+      "A": [
+        [
+          9
+        ],
+        [
+          7
+        ]
+      ],
+      "B": [
+        [
+          8,
+          8
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-015",
+      "inputFile": "case-015.json",
+      "inputSha256": "bf63cd763b9c6e9500be2b1021ba6381ff3c2e1543ad32e2b52054200098ea32"
+    },
+    {
+      "A": [
+        [
+          3
+        ]
+      ],
+      "B": [
+        [
+          3,
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-016",
+      "inputFile": "case-016.json",
+      "inputSha256": "4264c4488b17e96f7e8711f060a8b2c6cefa89bdfbcdf6447ee833abb0d24d8e"
+    },
+    {
+      "A": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 0.75,
+      "id": "case-017",
+      "inputFile": "case-017.json",
+      "inputSha256": "39343adc030ee5659c8d2f711a6c926b9cd0b11c580b6f89c40cb11809e9679d"
+    },
+    {
+      "A": [
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          9
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-018",
+      "inputFile": "case-018.json",
+      "inputSha256": "aec3452d4d88bf29c7495e3780c5eb705b80130f329c3eb2be7459099f274791"
+    },
+    {
+      "A": [
+        [
+          6,
+          8
+        ]
+      ],
+      "B": [
+        [
+          8,
+          6
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-019",
+      "inputFile": "case-019.json",
+      "inputSha256": "edfef4f41786eb47ec0b7b0b55236870f4dc5acc6fe4ced08565d70ca4a58602"
+    },
+    {
+      "A": [
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          8,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-020",
+      "inputFile": "case-020.json",
+      "inputSha256": "ff33134853e757931734c4f05d91f26d073dededaae0a1ebdc3bf9a5e274715b"
+    },
+    {
+      "A": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "B": [
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "稠密相等循环次数"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-021",
+      "inputFile": "case-021.json",
+      "inputSha256": "680c6e5a167ac39ae970223464d029ae302c8975463dc2493fc06d6eb811a103"
+    },
+    {
+      "A": [
+        [
+          2,
+          1
+        ]
+      ],
+      "B": [
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-022",
+      "inputFile": "case-022.json",
+      "inputSha256": "8071c444e34dca859114949fc4e81a09744b28cd22d7a0a26d45ddde619d7e22"
+    },
+    {
+      "A": [
+        [
+          3,
+          0
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "B": [
+        [
+          3,
+          6
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.0,
+      "id": "case-023",
+      "inputFile": "case-023.json",
+      "inputSha256": "45cb07c87a59fb7a260135067a88a2c0d81b7c4687619aa77e4bfa2277c22c02"
+    },
+    {
+      "A": [
+        [
+          3
+        ]
+      ],
+      "B": [
+        [
+          3
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-024",
+      "inputFile": "case-024.json",
+      "inputSha256": "c3d0e62337247a957e5c58b9d5752f29a11ab08f993d0a552a4d321c637656a0"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 1.0,
+      "id": "case-025",
+      "inputFile": "case-025.json",
+      "inputSha256": "8ff44cf055af45ae91ec875c7975487b0b6628d04f673b9f4ffb35dfc5230df0"
+    },
+    {
+      "A": [
+        [
+          3,
+          0
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "B": [
+        [
+          7
+        ],
+        [
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.5,
+      "id": "case-026",
+      "inputFile": "case-026.json",
+      "inputSha256": "17ba5a5e13460470195bddf1a3e642f3d3ab9a38b6691c26fac74c3c89f0635c"
+    },
+    {
+      "A": [
+        [
+          6,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "B": [
+        [
+          8,
+          3
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-027",
+      "inputFile": "case-027.json",
+      "inputSha256": "eb0ba00b173260123e0f097e47ffb739d20ea9a2e8b81604b4f00b882e1eda42"
+    },
+    {
+      "A": [
+        [
+          6,
+          1
+        ]
+      ],
+      "B": [
+        [
+          8
+        ],
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-028",
+      "inputFile": "case-028.json",
+      "inputSha256": "a54e1b3912c66827427fe460e0a7cb5a5dc832b98f546b73511a93e0818dc43c"
+    },
+    {
+      "A": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "B": [
+        [
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 1.0,
+      "id": "case-029",
+      "inputFile": "case-029.json",
+      "inputSha256": "e1b22413c57e65bd8ab4339ca8b322fff9e2e68ef5d300de4a604999d917b431"
+    },
+    {
+      "A": [
+        [
+          7,
+          9
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "B": [
+        [
+          1
+        ],
+        [
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-030",
+      "inputFile": "case-030.json",
+      "inputSha256": "beabc590e1d2043b8dfd3bf5a615531c88a174e1d779fcdb973536ee616d9304"
+    },
+    {
+      "A": [
+        [
+          6,
+          4
+        ]
+      ],
+      "B": [
+        [
+          7
+        ],
+        [
+          4
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-031",
+      "inputFile": "case-031.json",
+      "inputSha256": "44526e939a4b58b7e244078001891f1d0861b9e859f24b83e9d5b7ce509b92b4"
+    },
+    {
+      "A": [
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "B": [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-032",
+      "inputFile": "case-032.json",
+      "inputSha256": "625f8417a4651c9551e55d1bf96001f6599e471483cdb9ef2501496c44a7eda2"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 1.0,
+      "id": "case-033",
+      "inputFile": "case-033.json",
+      "inputSha256": "984aaeaa31b2569efccf0d7fc0ebe6551dfb2860a928322a68c578a90d652b04"
+    },
+    {
+      "A": [
+        [
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "B": [
+        [
+          1
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-034",
+      "inputFile": "case-034.json",
+      "inputSha256": "b7ef5c985030eb8dcd23c7f95341f37fc59ab599ca5345853ab6eacee85493bd"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "B": [
+        [
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-035",
+      "inputFile": "case-035.json",
+      "inputSha256": "aad114178c0cbad5fb5c35edd9e465a9d6e729281f24e6df45dcff168bfdfb5d"
+    },
+    {
+      "A": [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "B": [
+        [
+          9,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-036",
+      "inputFile": "case-036.json",
+      "inputSha256": "d300f49bb353f81212da16640b77a8737f7eafd94a30d9fca03a6832818c3b57"
+    },
+    {
+      "A": [
+        [
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          5
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 0.5,
+      "id": "case-037",
+      "inputFile": "case-037.json",
+      "inputSha256": "5468a6cf2c3d1d267f704960a12a0dd10f8f6c53109b16eb9fec3bc2e70dabff"
+    },
+    {
+      "A": [
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          7,
+          7
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-038",
+      "inputFile": "case-038.json",
+      "inputSha256": "9c3923e5b4bad7c07888b0ef061d1ef1ee351c7248ddb33b19a912d9ebe62ec0"
+    },
+    {
+      "A": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "B": [
+        [
+          9,
+          8
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-039",
+      "inputFile": "case-039.json",
+      "inputSha256": "d000e03f240e64361430207f71ac3df39e5309c57b044f2790297477d324644d"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "B": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 0.75,
+      "id": "case-040",
+      "inputFile": "case-040.json",
+      "inputSha256": "fc751c09ccdd4f4c8cdebc149ef442ea5f8426b3079e61b34ce4181ece92858b"
+    },
+    {
+      "A": [
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "B": [
+        [
+          7,
+          4
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-041",
+      "inputFile": "case-041.json",
+      "inputSha256": "75b9dfa2c73cd9151e675d35914cfe1422656e21ec7b7baae99802f982b895ec"
+    },
+    {
+      "A": [
+        [
+          3,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.5,
+      "zeroFractionB": 1.0,
+      "id": "case-042",
+      "inputFile": "case-042.json",
+      "inputSha256": "22acacf918030c53c574ea2644604552e799f3c380edf2cd836a59fe248301a4"
+    },
+    {
+      "A": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-043",
+      "inputFile": "case-043.json",
+      "inputSha256": "2d70f1b2054e9ed5ee22f4c2da54e29b9137b1af3b456f55adaf650c33a3e022"
+    },
+    {
+      "A": [
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "B": [
+        [
+          3,
+          8
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-044",
+      "inputFile": "case-044.json",
+      "inputSha256": "8a96c59544dad58e40815b59cd616e2ccb55df782213634bca7c73d8e3ff5814"
+    },
+    {
+      "A": [
+        [
+          4
+        ],
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          8
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-045",
+      "inputFile": "case-045.json",
+      "inputSha256": "c1a67acab9b569f9a00483e9aaeb3d010e74b3de01bc579646b3ffbde71dc796"
+    },
+    {
+      "A": [
+        [
+          5,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.5,
+      "zeroFractionB": 1.0,
+      "id": "case-046",
+      "inputFile": "case-046.json",
+      "inputSha256": "ebacf687b8bc3ec4f4b0a1dd48cf65a08838040a7f495d28af055f97a1fa30e4"
+    },
+    {
+      "A": [
+        [
+          0
+        ],
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          0,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.5,
+      "zeroFractionB": 0.5,
+      "id": "case-047",
+      "inputFile": "case-047.json",
+      "inputSha256": "cb311e134af78cf2fff8ef4263c03206231c7ab154b642081278ff0f4d78dcff"
+    },
+    {
+      "A": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "B": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-048",
+      "inputFile": "case-048.json",
+      "inputSha256": "953806750cbda9c5d41714580bb045e06f3bdc6e8620a465d491c51dbddb54bb"
+    },
+    {
+      "A": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "B": [
+        [
+          2,
+          4
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-049",
+      "inputFile": "case-049.json",
+      "inputSha256": "c1102cc12633fe1867bcf4fb2bda2845602a724d477ef540241a69dd5128e076"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "左零矩阵"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 0.0,
+      "id": "case-050",
+      "inputFile": "case-050.json",
+      "inputSha256": "c5f228c659eba76d1e292cd80c30733a3b534d41c335fd1fac0eded13739b5a0"
+    },
+    {
+      "A": [
+        [
+          8
+        ],
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          1,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-051",
+      "inputFile": "case-051.json",
+      "inputSha256": "adc3f81ac8f6e0e46485b548383ebfce8a2378c674d112b377b677580a4163cf"
+    },
+    {
+      "A": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "B": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-052",
+      "inputFile": "case-052.json",
+      "inputSha256": "bd2b67bb8849433a842f43a14715f46ce535f59c8fa903dbf6747279d5fc6dcb"
+    },
+    {
+      "A": [
+        [
+          7
+        ],
+        [
+          7
+        ]
+      ],
+      "B": [
+        [
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-053",
+      "inputFile": "case-053.json",
+      "inputSha256": "a57f429122083eeee167ded65462c5da6791ce6b10eb7e71b72499d19f41ab88"
+    },
+    {
+      "A": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "B": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "指定回归样例"
+      ],
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.0,
+      "id": "case-054",
+      "inputFile": "case-054.json",
+      "inputSha256": "4ed848fcc689fc94b64220a0240db677bb439f533d1a9aac3bebe0ea77bf35a3"
+    },
+    {
+      "A": [
+        [
+          4
+        ]
+      ],
+      "B": [
+        [
+          3,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-055",
+      "inputFile": "case-055.json",
+      "inputSha256": "0cf51d77d0a6ca69c4f8e32e03ce2b170db801a17a2b7fbd5041dd0118b8d1f7"
+    },
+    {
+      "A": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "B": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-056",
+      "inputFile": "case-056.json",
+      "inputSha256": "d7c6dca99a65d4c19a0acf7c747c49e3e7106913786adb0bcbe223df41e723ff"
+    },
+    {
+      "A": [
+        [
+          8,
+          3
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "右矩阵整行零"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.5,
+      "id": "case-057",
+      "inputFile": "case-057.json",
+      "inputSha256": "aaed9fdce50f14e66c65df2b2c3578440e08dd02eca9d373dc47d97fa64c27ab"
+    },
+    {
+      "A": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "B": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "双方全9 / 每个结果162张"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-058",
+      "inputFile": "case-058.json",
+      "inputSha256": "aa951b23bbaaed225607282dccc3bede3e9254569474c464d3ec8a7a92d6f003"
+    },
+    {
+      "A": [
+        [
+          7
+        ]
+      ],
+      "B": [
+        [
+          1,
+          3
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-059",
+      "inputFile": "case-059.json",
+      "inputSha256": "835f55ec0d75fd11f6cc765f335361bfd3dc4a8842c6d18187e6475d1ee5a59a"
+    },
+    {
+      "A": [
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "B": [
+        [
+          9,
+          9
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-060",
+      "inputFile": "case-060.json",
+      "inputSha256": "019787c2c0e268dcd6ced4f3e3d7c324ffa827b40abbfae5bcf76fa996ce27b2"
+    },
+    {
+      "A": [
+        [
+          2,
+          3
+        ]
+      ],
+      "B": [
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-061",
+      "inputFile": "case-061.json",
+      "inputSha256": "257a292645c37a689d917dd99d0467fc1de2e5c77053f285cfd7e8f0a6652422"
+    },
+    {
+      "A": [
+        [
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "B": [
+        [
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-062",
+      "inputFile": "case-062.json",
+      "inputSha256": "bb49b9db860fd339db7056369c2fbd24aa94f7adeb31f076c7b57d14dfb1314a"
+    },
+    {
+      "A": [
+        [
+          2,
+          2
+        ]
+      ],
+      "B": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-063",
+      "inputFile": "case-063.json",
+      "inputSha256": "8e61abb2115880ab459a5cea28457a089e5edd42544de8f32f97da0028e81a54"
+    },
+    {
+      "A": [
+        [
+          2,
+          9
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "B": [
+        [
+          8,
+          1
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-064",
+      "inputFile": "case-064.json",
+      "inputSha256": "efaf49860e065c561836d9437d3354ff20cc022a002088aabdf26c282b3be2f1"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "双方全零"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 1.0,
+      "id": "case-065",
+      "inputFile": "case-065.json",
+      "inputSha256": "ff0fcd7e29e955659a4c041d87458417dfa2be17dbbb067678777d0c67c3408d"
+    },
+    {
+      "A": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "B": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-066",
+      "inputFile": "case-066.json",
+      "inputSha256": "5910b2843b9d500b358b568b6d48c06a4e113d09d52eff29c648a68dada321c7"
+    },
+    {
+      "A": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          3,
+          1
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-067",
+      "inputFile": "case-067.json",
+      "inputSha256": "06f01659bbbe9b0c4407d8c93243a85d82d54f00ecc65dfe5b507db6c0edca7f"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "B": [
+        [
+          9,
+          6
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 0.25,
+      "id": "case-068",
+      "inputFile": "case-068.json",
+      "inputSha256": "f5c7870982b2104647c4729818c20c9d85da21fca29412c73d75baec4a213887"
+    },
+    {
+      "A": [
+        [
+          7,
+          9
+        ]
+      ],
+      "B": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-069",
+      "inputFile": "case-069.json",
+      "inputSha256": "4f34f5562fd124680039c017ce1cc44273d425d5f2e36918da121156446a4930"
+    },
+    {
+      "A": [
+        [
+          9
+        ],
+        [
+          6
+        ]
+      ],
+      "B": [
+        [
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-070",
+      "inputFile": "case-070.json",
+      "inputSha256": "f7b0c12958e5fad855d21c3c19e8193ee42d0ce0a493d7fc27d830681d9a157b"
+    },
+    {
+      "A": [
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        1
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-071",
+      "inputFile": "case-071.json",
+      "inputSha256": "7008b10823f84d1f2c2c45d3585c2009f941d040bb2d40200787a520461e43fa"
+    },
+    {
+      "A": [
+        [
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 1.0,
+      "id": "case-072",
+      "inputFile": "case-072.json",
+      "inputSha256": "dc4a4194deedcae93985a2c7e6c5061fa3da86362b57e88282ceac3f58124b30"
+    },
+    {
+      "A": [
+        [
+          2,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.5,
+      "zeroFractionB": 0.25,
+      "id": "case-073",
+      "inputFile": "case-073.json",
+      "inputSha256": "aa296f46f1373df7af9f007c147554bbbfb7cabacbde065a5369c84cb51f7274"
+    },
+    {
+      "A": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "B": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-074",
+      "inputFile": "case-074.json",
+      "inputSha256": "d87628a0c829571a822063e99097ec53778af2ea52b8df03eb6f2b0f79f80cad"
+    },
+    {
+      "A": [
+        [
+          4,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "B": [
+        [
+          9,
+          4
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-50"
+      ],
+      "labels": [
+        "sparse-50 / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-075",
+      "inputFile": "case-075.json",
+      "inputSha256": "84952776fcba0d8e619f78ba4416abcb7696eef8cfd510585e3b0ff026e4ea48"
+    },
+    {
+      "A": [
+        [
+          1,
+          3
+        ]
+      ],
+      "B": [
+        [
+          7
+        ],
+        [
+          9
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        1
+      ],
+      "families": [
+        "small-left"
+      ],
+      "labels": [
+        "small-left / 1x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-076",
+      "inputFile": "case-076.json",
+      "inputSha256": "e92b2ceb13ddd257d124cfd1133aa0982f2976f12263b383bf1162a49cb86a09"
+    },
+    {
+      "A": [
+        [
+          9,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "B": [
+        [
+          1,
+          7
+        ],
+        [
+          9,
+          5
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-077",
+      "inputFile": "case-077.json",
+      "inputSha256": "696b871377a46db422390b69497f12eb35239c42bfedadfdefa43d05bb0cc385"
+    },
+    {
+      "A": [
+        [
+          9
+        ]
+      ],
+      "B": [
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-078",
+      "inputFile": "case-078.json",
+      "inputSha256": "f20b2669a0bf4b677fc30d280c77ee10dc1054c7904d4ab4961e73a3c37357e3"
+    },
+    {
+      "A": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "B": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-079",
+      "inputFile": "case-079.json",
+      "inputSha256": "ddab22fe5db57e71dce5387c355809ae2a1d419d2e405b1cc357b858d1d7267a"
+    },
+    {
+      "A": [
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "B": [
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-080",
+      "inputFile": "case-080.json",
+      "inputSha256": "461be308a6f92e4f3466e316455b0b601c0d1889d1ec843a0c08f357b642f21d"
+    },
+    {
+      "A": [
+        [
+          6
+        ]
+      ],
+      "B": [
+        [
+          6,
+          8
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 1x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-081",
+      "inputFile": "case-081.json",
+      "inputSha256": "2e9de922a639dc1f4dc07a51ec59b921247c913081f5219ec45cf8dcb66d0ce3"
+    },
+    {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 0.75,
+      "id": "case-082",
+      "inputFile": "case-082.json",
+      "inputSha256": "62e5a73ff9cea6e03b4ad42e07566320e7ce4167387f2a402582ef88090a1fc8"
+    },
+    {
+      "A": [
+        [
+          7,
+          3
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "右零矩阵"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 1.0,
+      "id": "case-083",
+      "inputFile": "case-083.json",
+      "inputSha256": "39332ecce9e45830caedbe4d13952ed2c18e1ba94b458333334e0d48b5d394f5"
+    },
+    {
+      "A": [
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          3
+        ]
+      ],
+      "B": [
+        [
+          2,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 2x2x2 / 1"
+      ],
+      "zeroFractionA": 0.25,
+      "zeroFractionB": 0.0,
+      "id": "case-084",
+      "inputFile": "case-084.json",
+      "inputSha256": "77382793ba263b40c0f942d491a3878faf3f6ef9985bdd03664f902ffb57623c"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "B": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-085",
+      "inputFile": "case-085.json",
+      "inputSha256": "d5ba126b40b7041628b56637b3cfecca8e9eca161297638b9e304ee787810c24"
+    },
+    {
+      "A": [
+        [
+          1
+        ]
+      ],
+      "B": [
+        [
+          1
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-086",
+      "inputFile": "case-086.json",
+      "inputSha256": "0597bccc00612ebd5b98c63ab25cb75d94930ee12d1d75d0de91046a88c0bbf8"
+    },
+    {
+      "A": [
+        [
+          6,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "B": [
+        [
+          4
+        ],
+        [
+          7
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        1
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x2x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-087",
+      "inputFile": "case-087.json",
+      "inputSha256": "b1efe7251149e9f46fd8fabf63bdc39ebdc1f3f132c884c525f25133c91424d8"
+    },
+    {
+      "A": [
+        [
+          8,
+          9
+        ]
+      ],
+      "B": [
+        [
+          4,
+          9
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "mixed"
+      ],
+      "labels": [
+        "mixed / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-088",
+      "inputFile": "case-088.json",
+      "inputSha256": "7ffac6b46e8858d4bd49c34c9b5f78d45fd7244258c0fe2c898b7decd3379028"
+    },
+    {
+      "A": [
+        [
+          7
+        ]
+      ],
+      "B": [
+        [
+          9
+        ]
+      ],
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 1x1x1 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-089",
+      "inputFile": "case-089.json",
+      "inputSha256": "d8c23f9653b94f673376eb93692875e39a47aa2dc68e866b7107c2dcfb8c7ab8"
+    },
+    {
+      "A": [
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "B": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "large-left"
+      ],
+      "labels": [
+        "large-left / 2x2x2 / 2"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-090",
+      "inputFile": "case-090.json",
+      "inputSha256": "11894ac42cb79f09bed0e6f8709e638e81072647443f21362ffaa9e737725213"
+    },
+    {
+      "A": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x2x2 / 0"
+      ],
+      "zeroFractionA": 0.75,
+      "zeroFractionB": 0.75,
+      "id": "case-091",
+      "inputFile": "case-091.json",
+      "inputSha256": "e6f07b3fd6e0aef9dc42111fafa3837790b3fde1e0ee14ab049f3549b410c8e4"
+    },
+    {
+      "A": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "B": [
+        [
+          0,
+          2
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "sparse-75"
+      ],
+      "labels": [
+        "sparse-75 / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 1.0,
+      "zeroFractionB": 0.5,
+      "id": "case-092",
+      "inputFile": "case-092.json",
+      "inputSha256": "f3825b11477d94bd75cdd08f1682c0afa086820df49dd7e56f7532a200d8576a"
+    },
+    {
+      "A": [
+        [
+          9
+        ],
+        [
+          8
+        ]
+      ],
+      "B": [
+        [
+          2,
+          5
+        ]
+      ],
+      "shape": [
+        2,
+        1,
+        2
+      ],
+      "families": [
+        "dense-uniform"
+      ],
+      "labels": [
+        "dense-uniform / 2x1x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-093",
+      "inputFile": "case-093.json",
+      "inputSha256": "7678c256bb0752db28e17123b6f0f44a20629f099acc829687b3eb88a38b64d2"
+    },
+    {
+      "A": [
+        [
+          8,
+          7
+        ]
+      ],
+      "B": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "shape": [
+        1,
+        2,
+        2
+      ],
+      "families": [
+        "dense-high"
+      ],
+      "labels": [
+        "dense-high / 1x2x2 / 0"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-094",
+      "inputFile": "case-094.json",
+      "inputSha256": "23f3e9f12be2580eb91b44a129aa041a5d6e0c634779a8fdb98fc28570c9cc70"
+    },
+    {
+      "A": [
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "B": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "dense-low"
+      ],
+      "labels": [
+        "dense-low / 2x2x2 / 3"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.0,
+      "id": "case-095",
+      "inputFile": "case-095.json",
+      "inputSha256": "8fdc35927076a4dccc2a11a16c532c871d3d0eb9cebaf7100ecb7434e8a2e719"
+    },
+    {
+      "A": [
+        [
+          8,
+          3
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "B": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "families": [
+        "boundary"
+      ],
+      "labels": [
+        "右矩阵整列零"
+      ],
+      "zeroFractionA": 0.0,
+      "zeroFractionB": 0.5,
+      "id": "case-096",
+      "inputFile": "case-096.json",
+      "inputSha256": "5564dd0223a0c1267eeca49aba1049402d19dccc4e26c433fae109b9dae2039b"
+    }
+  ]
+}

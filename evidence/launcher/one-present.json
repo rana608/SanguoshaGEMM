@@ -1,0 +1,30 @@
+{
+    "editions": [
+        {
+            "arguments": [
+                "--gemm"
+            ],
+            "button": "启动原始版",
+            "edition": "Baseline",
+            "enabled": true,
+            "pid": 0,
+            "program": "C:/Users/rana608/Music/三国杀GEMM/evidence/launcher/missing-clients-g4omvyzh/SanguoshaGEMM-Baseline/SanguoshaGEMM-Baseline.exe",
+            "running": false,
+            "status": "",
+            "workingDirectory": "C:/Users/rana608/Music/三国杀GEMM/evidence/launcher/missing-clients-g4omvyzh/SanguoshaGEMM-Baseline"
+        },
+        {
+            "arguments": [
+                "--gemm"
+            ],
+            "button": "启动优化版",
+            "edition": "Optimized",
+            "enabled": false,
+            "pid": 0,
+            "program": "C:/Users/rana608/Music/三国杀GEMM/evidence/launcher/SanguoshaGEMM-Optimized/SanguoshaGEMM-Optimized.exe",
+            "running": false,
+            "status": "未找到此版本，请完整解压统一启动包。",
+            "workingDirectory": "C:/Users/rana608/Music/三国杀GEMM/evidence/launcher/SanguoshaGEMM-Optimized"
+        }
+    ]
+}

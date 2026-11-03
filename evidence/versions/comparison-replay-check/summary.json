@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "A": [
+    [
+      0
+    ]
+  ],
+  "B": [
+    [
+      2
+    ]
+  ],
+  "C": [
+    [
+      0
+    ]
+  ],
+  "speed": 2,
+  "inputSha256": "47ed99bf5a06fea1a04297500b1c7988edf53f8af44022039d2b526fc185d196",
+  "createdShanghai": "20261103-155615-632103",
+  "warmupRuns": 1,
+  "measuredRuns": 1,
+  "p95Method": "nearest-rank",
+  "order": "alternating; sequential processes",
+  "timing": "engineMs excludes startup, setup, intentional delays and rendering; computeMs=setup+runWallMs; processWallMs includes startup and output",
+  "results": [
+    {
+      "edition": "baseline",
+      "algorithm": "baseline-v1",
+      "samplesMs": [
+        0
+      ],
+      "medianMs": 0,
+      "p95Ms": 0,
+      "medianPrepareMs": 1.0321,
+      "medianRunWallMs": 0.0225,
+      "medianComputeMs": 1.0546,
+      "medianProcessWallMs": 188.40249998902436,
+      "medianProcessCpuMs": 140.625,
+      "peakWorkingSetBytes": 35110912,
+      "processWallSamplesMs": [
+        188.40249998902436
+      ],
+      "computeSamplesMs": [
+        1.0546
+      ],
+      "activeCardUses": 0,
+      "rescues": 0,
+      "fangzhu": 0,
+      "drawnCards": 0,
+      "judgements": 0,
+      "consumedCards": 0,
+      "peakWorkingSetMiB": 33.484375,
+      "executableSha256": "ea1a300768c6c800f865acd9cb37b3aa80baa94977080f6ad9bcd3a764224dcd",
+      "speedupVsBaseline": 1.0
+    },
+    {
+      "edition": "optimized",
+      "algorithm": "transpose-v1.2",
+      "samplesMs": [
+        0
+      ],
+      "medianMs": 0,
+      "p95Ms": 0,
+      "medianPrepareMs": 0.8812,
+      "medianRunWallMs": 0.0305,
+      "medianComputeMs": 0.9117,
+      "medianProcessWallMs": 195.63950000156183,
+      "medianProcessCpuMs": 171.875,
+      "peakWorkingSetBytes": 35549184,
+      "processWallSamplesMs": [
+        195.63950000156183
+      ],
+      "computeSamplesMs": [
+        0.9117
+      ],
+      "activeCardUses": 0,
+      "rescues": 0,
+      "fangzhu": 0,
+      "drawnCards": 0,
+      "judgements": 0,
+      "consumedCards": 0,
+      "peakWorkingSetMiB": 33.90234375,
+      "executableSha256": "ac66aeac129c73081ed312b6e1964baff8ef90b742457df57456b2a041973a21",
+      "speedupVsBaseline": 1.0
+    }
+  ]
+}

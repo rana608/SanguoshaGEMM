@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "deterministicCorpus": true,
+  "oneCaseNativeSmoke": true,
+  "completedResumeDoesNotRerun": true,
+  "changedMethodRejected": true,
+  "nativeCalls": 8,
+  "automaticMethodSnapshot": true,
+  "latestRun": "snapshot-run"
+}

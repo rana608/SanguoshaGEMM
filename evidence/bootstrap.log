@@ -1,0 +1,4 @@
+Verified qt-installer.exe
+Verified swig.zip
+Preserved 8 downloaded notices plus bundled Lua/MinGW notices
+Local toolchain is ready. Run scripts/build.ps1, then scripts/package.ps1.

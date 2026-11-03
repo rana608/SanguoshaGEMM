@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "simultaneousProcesses": 2,
+  "algorithmMismatchRejections": 2,
+  "sharedCwdUntouched": true,
+  "settings": {
+    "baseline": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Baseline/config-baseline.ini",
+    "optimized": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Optimized/config-optimized.ini"
+  },
+  "ports": {
+    "baseline": 50574,
+    "optimized": 50575
+  }
+}

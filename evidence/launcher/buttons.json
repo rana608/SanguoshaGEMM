@@ -1,0 +1,32 @@
+{
+    "buttonsResetAfterExit": true,
+    "editions": [
+        {
+            "arguments": [
+                "--gemm"
+            ],
+            "button": "启动原始版",
+            "edition": "Baseline",
+            "enabled": false,
+            "pid": 33220,
+            "program": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Baseline/SanguoshaGEMM-Baseline.exe",
+            "running": true,
+            "status": "已启动，请在客户端输入矩阵。",
+            "workingDirectory": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Baseline"
+        },
+        {
+            "arguments": [
+                "--gemm"
+            ],
+            "button": "启动优化版",
+            "edition": "Optimized",
+            "enabled": false,
+            "pid": 38220,
+            "program": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Optimized/SanguoshaGEMM-Optimized.exe",
+            "running": true,
+            "status": "已启动，请在客户端输入矩阵。",
+            "workingDirectory": "C:/Users/rana608/Music/三国杀GEMM/dist/SanguoshaGEMM-Optimized"
+        }
+    ],
+    "passed": true
+}

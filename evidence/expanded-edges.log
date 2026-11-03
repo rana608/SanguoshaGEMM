@@ -1,0 +1,17 @@
+baseline no-rescue failed
+baseline empty-deck failed
+baseline no-range failed
+baseline invalid-101 invalid-input
+baseline invalid-100.1 invalid-input
+baseline invalid-1e+100 invalid-input
+baseline controls complete
+baseline replay complete
+optimized no-rescue failed
+optimized empty-deck failed
+optimized no-range failed
+optimized invalid-101 invalid-input
+optimized invalid-100.1 invalid-input
+optimized invalid-1e+100 invalid-input
+optimized controls complete
+optimized replay complete
+PASS 16

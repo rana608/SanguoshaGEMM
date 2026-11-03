@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archiveHashes": 4,
+  "standaloneTestZip": true,
+  "extractedRecords": 2112,
+  "extractedCases": 96,
+  "reportLinksChecked": true,
+  "standaloneCliHelp": true
+}

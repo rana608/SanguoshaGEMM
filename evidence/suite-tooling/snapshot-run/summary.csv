@@ -1,0 +1,2 @@
+﻿id,status,families,shape,A,B,C,baselineEngineMs,optimizedEngineMs,engineSpeedup,baselineComputeMs,optimizedComputeMs,computeSpeedup,baselineProcessMs,optimizedProcessMs,baselineSlash,optimizedSlash,transposed,zeroFractionA,zeroFractionB,error
+case-086,passed,"[""dense-low""]","[1,1,1]",[[1]],[[1]],[[1]],2.9955,2.7343,1.0955271916029696,4.1164000000000005,3.8411999999999997,1.071644277829845,215.0028000032762,213.1733999995049,1,1,False,0.0,0.0,

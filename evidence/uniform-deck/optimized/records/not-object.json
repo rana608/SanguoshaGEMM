@@ -1,0 +1,4 @@
+{
+    "error": "Input must be a JSON object",
+    "status": "invalid-input"
+}

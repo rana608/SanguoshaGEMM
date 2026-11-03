@@ -1,0 +1,385 @@
+START 1/96 case-001 ['dense-uniform']
+baseline: 637.17 ms engine median; 46 Slash
+optimized: 519.66 ms engine median; 38 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-001\report.html
+START 2/96 case-002 ['dense-high']
+baseline: 932.01 ms engine median; 68 Slash
+optimized: 874.62 ms engine median; 64 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-002\report.html
+START 3/96 case-003 ['small-left']
+baseline: 45.69 ms engine median; 8 Slash
+optimized: 45.11 ms engine median; 8 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-003\report.html
+START 4/96 case-004 ['dense-high']
+baseline: 824.22 ms engine median; 60 Slash
+optimized: 827.74 ms engine median; 60 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-004\report.html
+START 5/96 case-005 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-005\report.html
+START 6/96 case-006 ['dense-low']
+baseline: 288.73 ms engine median; 20 Slash
+optimized: 276.28 ms engine median; 20 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-006\report.html
+START 7/96 case-007 ['large-left']
+baseline: 63.00 ms engine median; 15 Slash
+optimized: 16.71 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-007\report.html
+START 8/96 case-008 ['sparse-50']
+baseline: 24.67 ms engine median; 9 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-008\report.html
+START 9/96 case-009 ['dense-low']
+baseline: 184.63 ms engine median; 14 Slash
+optimized: 186.06 ms engine median; 14 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-009\report.html
+START 10/96 case-010 ['dense-high']
+baseline: 61.33 ms engine median; 15 Slash
+optimized: 60.82 ms engine median; 15 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-010\report.html
+START 11/96 case-011 ['small-left']
+baseline: 185.00 ms engine median; 14 Slash
+optimized: 179.33 ms engine median; 14 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-011\report.html
+START 12/96 case-012 ['sparse-50']
+baseline: 447.32 ms engine median; 36 Slash
+optimized: 171.82 ms engine median; 13 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-012\report.html
+START 13/96 case-013 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-013\report.html
+START 14/96 case-014 ['mixed']
+baseline: 11.10 ms engine median; 4 Slash
+optimized: 10.90 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-014\report.html
+START 15/96 case-015 ['dense-high']
+baseline: 281.25 ms engine median; 32 Slash
+optimized: 273.76 ms engine median; 32 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-015\report.html
+START 16/96 case-016 ['dense-low']
+baseline: 32.62 ms engine median; 6 Slash
+optimized: 16.29 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-016\report.html
+START 17/96 case-017 ['sparse-50']
+baseline: 96.39 ms engine median; 8 Slash
+optimized: 25.79 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-017\report.html
+START 18/96 case-018 ['small-left']
+baseline: 2.91 ms engine median; 1 Slash
+optimized: 2.83 ms engine median; 1 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-018\report.html
+START 19/96 case-019 ['dense-uniform']
+baseline: 260.73 ms engine median; 28 Slash
+optimized: 147.07 ms engine median; 25 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-019\report.html
+START 20/96 case-020 ['dense-high']
+baseline: 106.28 ms engine median; 18 Slash
+optimized: 68.73 ms engine median; 16 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-020\report.html
+START 21/96 case-021 ['boundary']
+baseline: 281.56 ms engine median; 20 Slash
+optimized: 270.95 ms engine median; 20 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-021\report.html
+START 22/96 case-022 ['dense-low']
+baseline: 12.57 ms engine median; 3 Slash
+optimized: 12.01 ms engine median; 3 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-022\report.html
+START 23/96 case-023 ['mixed']
+baseline: 566.22 ms engine median; 40 Slash
+optimized: 475.77 ms engine median; 34 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-023\report.html
+START 24/96 case-024 ['dense-uniform']
+baseline: 9.74 ms engine median; 3 Slash
+optimized: 9.30 ms engine median; 3 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-024\report.html
+START 25/96 case-025 ['sparse-75']
+baseline: 30.67 ms engine median; 6 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-025\report.html
+START 26/96 case-026 ['sparse-50']
+baseline: 104.78 ms engine median; 19 Slash
+optimized: 62.34 ms engine median; 11 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-026\report.html
+START 27/96 case-027 ['dense-uniform']
+baseline: 725.60 ms engine median; 50 Slash
+optimized: 586.18 ms engine median; 42 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-027\report.html
+START 28/96 case-028 ['mixed']
+baseline: 29.87 ms engine median; 7 Slash
+optimized: 30.56 ms engine median; 7 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-028\report.html
+START 29/96 case-029 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-029\report.html
+START 30/96 case-030 ['mixed']
+baseline: 166.77 ms engine median; 29 Slash
+optimized: 151.59 ms engine median; 16 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-030\report.html
+START 31/96 case-031 ['dense-uniform']
+baseline: 44.48 ms engine median; 10 Slash
+optimized: 45.25 ms engine median; 10 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-031\report.html
+START 32/96 case-032 ['large-left']
+baseline: 200.16 ms engine median; 34 Slash
+optimized: 110.27 ms engine median; 12 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-032\report.html
+START 33/96 case-033 ['sparse-75']
+baseline: 23.18 ms engine median; 2 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-033\report.html
+START 34/96 case-034 ['large-left']
+baseline: 65.65 ms engine median; 15 Slash
+optimized: 11.57 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-034\report.html
+START 35/96 case-035 ['dense-high']
+baseline: 193.87 ms engine median; 33 Slash
+optimized: 283.14 ms engine median; 30 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-035\report.html
+START 36/96 case-036 ['small-left']
+baseline: 114.70 ms engine median; 12 Slash
+optimized: 113.23 ms engine median; 12 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-036\report.html
+START 37/96 case-037 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-037\report.html
+START 38/96 case-038 ['small-left']
+baseline: 11.49 ms engine median; 2 Slash
+optimized: 11.74 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-038\report.html
+START 39/96 case-039 ['small-left']
+baseline: 139.17 ms engine median; 10 Slash
+optimized: 138.97 ms engine median; 10 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-039\report.html
+START 40/96 case-040 ['sparse-50']
+baseline: 26.47 ms engine median; 2 Slash
+optimized: 14.00 ms engine median; 1 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-040\report.html
+START 41/96 case-041 ['mixed']
+baseline: 75.00 ms engine median; 8 Slash
+optimized: 76.44 ms engine median; 8 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-041\report.html
+START 42/96 case-042 ['sparse-50']
+baseline: 11.23 ms engine median; 3 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-042\report.html
+START 43/96 case-043 ['dense-low']
+baseline: 8.80 ms engine median; 2 Slash
+optimized: 8.86 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-043\report.html
+START 44/96 case-044 ['mixed']
+baseline: 589.32 ms engine median; 42 Slash
+optimized: 586.32 ms engine median; 42 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-044\report.html
+START 45/96 case-045 ['dense-uniform']
+baseline: 57.46 ms engine median; 13 Slash
+optimized: 56.90 ms engine median; 13 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-045\report.html
+START 46/96 case-046 ['sparse-75']
+baseline: 82.18 ms engine median; 10 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-046\report.html
+START 47/96 case-047 ['sparse-50']
+baseline: 166.96 ms engine median; 18 Slash
+optimized: 19.53 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-047\report.html
+START 48/96 case-048 ['large-left']
+baseline: 1000.73 ms engine median; 72 Slash
+optimized: 168.38 ms engine median; 12 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-048\report.html
+START 49/96 case-049 ['mixed']
+baseline: 496.92 ms engine median; 36 Slash
+optimized: 487.67 ms engine median; 36 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-049\report.html
+START 50/96 case-050 ['boundary']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-050\report.html
+START 51/96 case-051 ['large-left']
+baseline: 321.31 ms engine median; 34 Slash
+optimized: 55.49 ms engine median; 6 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-051\report.html
+START 52/96 case-052 ['large-left']
+baseline: 971.18 ms engine median; 68 Slash
+optimized: 226.68 ms engine median; 16 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-052\report.html
+START 53/96 case-053 ['sparse-50']
+baseline: 61.12 ms engine median; 14 Slash
+optimized: 23.97 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-053\report.html
+START 54/96 case-054 ['boundary']
+baseline: 161.03 ms engine median; 12 Slash
+optimized: 120.42 ms engine median; 9 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-054\report.html
+START 55/96 case-055 ['mixed']
+baseline: 45.56 ms engine median; 8 Slash
+optimized: 45.27 ms engine median; 8 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-055\report.html
+START 56/96 case-056 ['small-left']
+baseline: 227.31 ms engine median; 16 Slash
+optimized: 219.65 ms engine median; 16 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-056\report.html
+START 57/96 case-057 ['boundary']
+baseline: 527.41 ms engine median; 40 Slash
+optimized: 252.98 ms engine median; 18 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-057\report.html
+START 58/96 case-058 ['boundary']
+baseline: 994.73 ms engine median; 72 Slash
+optimized: 993.63 ms engine median; 72 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-058\report.html
+START 59/96 case-059 ['large-left']
+baseline: 80.20 ms engine median; 14 Slash
+optimized: 16.85 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-059\report.html
+START 60/96 case-060 ['dense-high']
+baseline: 879.06 ms engine median; 64 Slash
+optimized: 873.72 ms engine median; 64 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-060\report.html
+START 61/96 case-061 ['small-left']
+baseline: 85.91 ms engine median; 10 Slash
+optimized: 84.60 ms engine median; 10 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-061\report.html
+START 62/96 case-062 ['dense-high']
+baseline: 60.84 ms engine median; 15 Slash
+optimized: 62.92 ms engine median; 15 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-062\report.html
+START 63/96 case-063 ['dense-low']
+baseline: 78.33 ms engine median; 8 Slash
+optimized: 81.10 ms engine median; 8 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-063\report.html
+START 64/96 case-064 ['dense-uniform']
+baseline: 721.16 ms engine median; 52 Slash
+optimized: 548.50 ms engine median; 40 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-064\report.html
+START 65/96 case-065 ['boundary']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-065\report.html
+START 66/96 case-066 ['dense-low']
+baseline: 275.44 ms engine median; 20 Slash
+optimized: 221.01 ms engine median; 16 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-066\report.html
+START 67/96 case-067 ['dense-low']
+baseline: 38.27 ms engine median; 4 Slash
+optimized: 38.51 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-067\report.html
+START 68/96 case-068 ['sparse-75']
+baseline: 25.29 ms engine median; 2 Slash
+optimized: 13.40 ms engine median; 1 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-068\report.html
+START 69/96 case-069 ['large-left']
+baseline: 300.00 ms engine median; 32 Slash
+optimized: 66.38 ms engine median; 11 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-069\report.html
+START 70/96 case-070 ['mixed']
+baseline: 66.63 ms engine median; 15 Slash
+optimized: 34.97 ms engine median; 6 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-070\report.html
+START 71/96 case-071 ['small-left']
+baseline: 13.43 ms engine median; 3 Slash
+optimized: 13.24 ms engine median; 3 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-071\report.html
+START 72/96 case-072 ['sparse-50']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-072\report.html
+START 73/96 case-073 ['sparse-50']
+baseline: 33.51 ms engine median; 4 Slash
+optimized: 18.16 ms engine median; 2 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-073\report.html
+START 74/96 case-074 ['small-left']
+baseline: 285.86 ms engine median; 22 Slash
+optimized: 283.85 ms engine median; 22 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-074\report.html
+START 75/96 case-075 ['sparse-50']
+baseline: 601.03 ms engine median; 46 Slash
+optimized: 592.30 ms engine median; 46 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-075\report.html
+START 76/96 case-076 ['small-left']
+baseline: 15.84 ms engine median; 4 Slash
+optimized: 15.58 ms engine median; 4 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-076\report.html
+START 77/96 case-077 ['dense-uniform']
+baseline: 467.58 ms engine median; 36 Slash
+optimized: 467.75 ms engine median; 36 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-077\report.html
+START 78/96 case-078 ['large-left']
+baseline: 24.69 ms engine median; 9 Slash
+optimized: 2.80 ms engine median; 1 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-078\report.html
+START 79/96 case-079 ['dense-low']
+baseline: 43.65 ms engine median; 8 Slash
+optimized: 42.72 ms engine median; 8 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-079\report.html
+START 80/96 case-080 ['dense-high']
+baseline: 857.33 ms engine median; 66 Slash
+optimized: 820.11 ms engine median; 64 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-080\report.html
+START 81/96 case-081 ['dense-uniform']
+baseline: 65.18 ms engine median; 12 Slash
+optimized: 63.64 ms engine median; 12 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-081\report.html
+START 82/96 case-082 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-082\report.html
+START 83/96 case-083 ['boundary']
+baseline: 515.95 ms engine median; 46 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-083\report.html
+START 84/96 case-084 ['mixed']
+baseline: 561.24 ms engine median; 40 Slash
+optimized: 474.53 ms engine median; 34 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-084\report.html
+START 85/96 case-085 ['large-left']
+baseline: 894.54 ms engine median; 64 Slash
+optimized: 310.84 ms engine median; 22 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-085\report.html
+START 86/96 case-086 ['dense-low']
+baseline: 2.89 ms engine median; 1 Slash
+optimized: 2.93 ms engine median; 1 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-086\report.html
+START 87/96 case-087 ['dense-uniform']
+baseline: 68.64 ms engine median; 12 Slash
+optimized: 66.82 ms engine median; 12 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-087\report.html
+START 88/96 case-088 ['mixed']
+baseline: 336.38 ms engine median; 34 Slash
+optimized: 162.13 ms engine median; 26 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-088\report.html
+START 89/96 case-089 ['dense-high']
+baseline: 21.39 ms engine median; 7 Slash
+optimized: 21.69 ms engine median; 7 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-089\report.html
+START 90/96 case-090 ['large-left']
+baseline: 859.16 ms engine median; 60 Slash
+optimized: 196.70 ms engine median; 14 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-090\report.html
+START 91/96 case-091 ['sparse-75']
+baseline: 22.75 ms engine median; 2 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-091\report.html
+START 92/96 case-092 ['sparse-75']
+baseline: 0.00 ms engine median; 0 Slash
+optimized: 0.00 ms engine median; 0 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-092\report.html
+START 93/96 case-093 ['dense-uniform']
+baseline: 298.41 ms engine median; 34 Slash
+optimized: 128.72 ms engine median; 14 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-093\report.html
+START 94/96 case-094 ['dense-high']
+baseline: 270.97 ms engine median; 30 Slash
+optimized: 265.20 ms engine median; 30 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-094\report.html
+START 95/96 case-095 ['dense-low']
+baseline: 240.89 ms engine median; 18 Slash
+optimized: 234.07 ms engine median; 18 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-095\report.html
+START 96/96 case-096 ['boundary']
+baseline: 500.60 ms engine median; 40 Slash
+optimized: 241.44 ms engine median; 18 Slash
+C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\cases\case-096\report.html
+FINISHED 96/96 passed, 0 failed: C:\Users\rana608\Music\����ɱGEMM\evidence\versions\suite-v1\report.html

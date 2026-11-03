@@ -1,0 +1,19 @@
+# Local toolchain, compiled programs, portable ZIPs, and temporary checks.
+/.tools/
+/build/
+/dist/
+/.package-check/
+__pycache__/
+*.py[cod]
+
+# Machine-local game settings and credentials.
+/config.ini
+/config-*.ini
+/sanguosha.ini
+/.env
+/.env.*
+*.pem
+*.key
+
+# Keep the original upstream checkout local; its source snapshot is vendored.
+/upstream/.git/

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "realButtonLaunches": 2,
+  "distinctClients": true,
+  "clientsOpenedWithGemm": true,
+  "correctWorkingDirectories": true,
+  "buttonsResetAfterExit": true,
+  "missingClientsDisabled": true,
+  "childAndSiblingLayouts": true,
+  "offscreenRender": true,
+  "gameBinariesUnchanged": true,
+  "launcherSha256": "97dd8ad1f25166bdd0d2b8ace17fdbb0e86c0557c8781350bd08244f24705bf9"
+}

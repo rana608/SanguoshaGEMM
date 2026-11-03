@@ -1,0 +1,101 @@
+{
+  "passed": 16,
+  "cases": [
+    {
+      "edition": "baseline",
+      "name": "no-rescue",
+      "status": "failed",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "empty-deck",
+      "status": "failed",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "no-range",
+      "status": "failed",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "invalid-101",
+      "status": "invalid-input",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "invalid-100.1",
+      "status": "invalid-input",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "invalid-1e+100",
+      "status": "invalid-input",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "controls",
+      "status": "complete",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "baseline",
+      "name": "replay",
+      "status": "complete",
+      "executableSha256": "977ad3c10b51f19a9ce0907fd859996886891ec3bb49fef813e74dbdec46922d"
+    },
+    {
+      "edition": "optimized",
+      "name": "no-rescue",
+      "status": "failed",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "empty-deck",
+      "status": "failed",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "no-range",
+      "status": "failed",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "invalid-101",
+      "status": "invalid-input",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "invalid-100.1",
+      "status": "invalid-input",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "invalid-1e+100",
+      "status": "invalid-input",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "controls",
+      "status": "complete",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    },
+    {
+      "edition": "optimized",
+      "name": "replay",
+      "status": "complete",
+      "executableSha256": "d7dcc150e7500933aa6492d387e7f142a71bbbade14df9da02e17ac5c0577ac4"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "warmupRuns": 1,
+  "measuredRuns": 10,
+  "p95Method": "nearest-rank",
+  "timing": "engine card-resolution wall time; excludes process startup, setup, pacing and rendering",
+  "results": [
+    {
+      "algorithm": "baseline-v1",
+      "activeCardUses": 60,
+      "rescues": 60,
+      "fangzhu": 60,
+      "drawnCards": 30,
+      "judgements": 0,
+      "consumedCards": 120,
+      "samplesMs": [
+        748.3532,
+        763.4123,
+        744.8269,
+        742.1428,
+        720.2194,
+        702.7921,
+        717.5602,
+        709.1923,
+        710.4897,
+        701.1616
+      ],
+      "medianMs": 718.8897999999999,
+      "p95Ms": 763.4123,
+      "medianPrepareMs": 3.40165,
+      "medianRunWallMs": 738.8108500000001,
+      "medianProcessCpuMs": 937.5,
+      "peakWorkingSetBytes": 36896768,
+      "speedupVsBaseline": 1.0
+    },
+    {
+      "algorithm": "sparse-v1.1",
+      "activeCardUses": 30,
+      "rescues": 30,
+      "fangzhu": 30,
+      "drawnCards": 30,
+      "judgements": 0,
+      "consumedCards": 60,
+      "samplesMs": [
+        384.0418,
+        382.1966,
+        386.2154,
+        382.6956,
+        408.8076,
+        387.3762,
+        389.8092,
+        397.3125,
+        382.6288,
+        379.9198
+      ],
+      "medianMs": 385.1286,
+      "p95Ms": 408.8076,
+      "medianPrepareMs": 3.2531,
+      "medianRunWallMs": 396.56399999999996,
+      "medianProcessCpuMs": 562.5,
+      "peakWorkingSetBytes": 37011456,
+      "speedupVsBaseline": 1.8666227332896075
+    },
+    {
+      "algorithm": "transpose-v1.2",
+      "activeCardUses": 4,
+      "rescues": 4,
+      "fangzhu": 4,
+      "drawnCards": 30,
+      "judgements": 0,
+      "consumedCards": 8,
+      "samplesMs": [
+        50.7331,
+        51.6343,
+        49.8407,
+        50.2685,
+        51.8733,
+        50.5626,
+        51.1584,
+        51.3915,
+        50.2954,
+        50.5728
+      ],
+      "medianMs": 50.652950000000004,
+      "p95Ms": 51.8733,
+      "medianPrepareMs": 3.2491,
+      "medianRunWallMs": 52.2631,
+      "medianProcessCpuMs": 234.375,
+      "peakWorkingSetBytes": 36483072,
+      "speedupVsBaseline": 14.192456707852156
+    }
+  ]
+}

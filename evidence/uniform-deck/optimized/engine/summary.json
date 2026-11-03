@@ -1,0 +1,216 @@
+{
+  "passed": 13,
+  "edition": "optimized",
+  "resourceVersion": "uniform-large-v1",
+  "attackCapacity": 800,
+  "rescueCapacity": 800,
+  "drawPileCapacity": 131072,
+  "initialDrawPileSha256": "6e497adf263d4851ce383d873fed16ff46ec1176aad4ca51a8ab951b7e8b6aa6",
+  "executableSha256": "5556eba5d7c7d1276dd8e58864b11d21ce626ba1c8a52e0a75c84af4f965a6fc",
+  "cases": [
+    {
+      "name": "zero",
+      "status": "complete",
+      "C": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tasks": 0,
+      "completed": 0,
+      "drawnCards": 0
+    },
+    {
+      "name": "one",
+      "status": "complete",
+      "C": [
+        [
+          1
+        ]
+      ],
+      "tasks": 1,
+      "completed": 1,
+      "drawnCards": 1
+    },
+    {
+      "name": "scalar-9",
+      "status": "complete",
+      "C": [
+        [
+          81
+        ]
+      ],
+      "tasks": 9,
+      "completed": 9,
+      "drawnCards": 81
+    },
+    {
+      "name": "scalar-10",
+      "status": "complete",
+      "C": [
+        [
+          100
+        ]
+      ],
+      "tasks": 10,
+      "completed": 10,
+      "drawnCards": 100
+    },
+    {
+      "name": "example",
+      "status": "complete",
+      "C": [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "tasks": 9,
+      "completed": 9,
+      "drawnCards": 18
+    },
+    {
+      "name": "all-9",
+      "status": "complete",
+      "C": [
+        [
+          162,
+          162
+        ],
+        [
+          162,
+          162
+        ]
+      ],
+      "tasks": 72,
+      "completed": 72,
+      "drawnCards": 648
+    },
+    {
+      "name": "all-100",
+      "status": "complete",
+      "C": [
+        [
+          20000,
+          20000
+        ],
+        [
+          20000,
+          20000
+        ]
+      ],
+      "tasks": 800,
+      "completed": 800,
+      "drawnCards": 80000
+    },
+    {
+      "name": "rectangle",
+      "status": "complete",
+      "C": [
+        [
+          112
+        ],
+        [
+          135
+        ]
+      ],
+      "tasks": 30,
+      "completed": 30,
+      "drawnCards": 247
+    },
+    {
+      "name": "zero-right",
+      "status": "complete",
+      "C": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tasks": 0,
+      "completed": 0,
+      "drawnCards": 0
+    },
+    {
+      "name": "controls",
+      "status": "complete",
+      "C": [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "tasks": 9,
+      "completed": 9,
+      "drawnCards": 18
+    },
+    {
+      "name": "no-rescue",
+      "status": "failed",
+      "C": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tasks": 8,
+      "completed": 0,
+      "drawnCards": 0
+    },
+    {
+      "name": "empty-deck",
+      "status": "failed",
+      "C": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tasks": 8,
+      "completed": 0,
+      "drawnCards": 0
+    },
+    {
+      "name": "no-range",
+      "status": "failed",
+      "C": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tasks": 8,
+      "completed": 0,
+      "drawnCards": 0
+    }
+  ]
+}
